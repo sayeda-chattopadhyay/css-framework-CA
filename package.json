@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/sayeda-chattopadhyay/css-framework-CA/issues"
   },
-  "homepage": "https://github.com/sayeda-chattopadhyay/css-framework-CA#readme"
+  "homepage": "https://github.com/sayeda-chattopadhyay/css-framework-CA#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
 }
