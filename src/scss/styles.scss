@@ -2,6 +2,18 @@
 @import "variables";
 
 // Bootstrap Style
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // original style
+
+.fs-0 {
+  font: size 4rem;
+}
+
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+.bg-gray {
+  background-color: #f0f2f5;
+}
