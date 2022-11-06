@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Welcome to Bcreative. This website is for those people who loves to share their creative works and inspire others."
+      content="Welcome to Bcreative. This website is for all who loves to share their creative works and inspire others."
     />
     <title>Bcreative | Log in page</title>
     <script
@@ -16,225 +16,244 @@
     <link rel="stylesheet" href="/dist/css/styles.css" />
   </head>
   <body>
-    <div
-      class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
-    >
-      <div class="row">
-        <!-- heading -->
-        <div class="col-12 col-sm-12 col-md-5 col-lg-7 mt-lg-5 pt-lg-5">
-          <h1 class="text-primary fw-bold fs-0">Bcreative</h1>
-          <p class="w-75" mx-auto mx-lg-0 fs-4>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque dolores autem fugiat. Quisquam itaque hic cupiditate, totam natus expedita incidunt tenetur iure dolorum atque dolorem voluptate nemo consequatur id!
-          </p>
-        </div>
-        <!-- form -->
-        <div class="col-12 col-sm-12 col-md-7 col-lg-5">
-        <form action="index.html" id="log-in-form">
-          <div class="row g-3">
-            <div class="col-12">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="name@example.com"
-                required
-              />
-              <div class="invalid-feedback">
-                Please enter a valid email address.
-              </div>
-            </div>
-            <div class="col-12">
-              <label for="password" class="form-label">Password</label>
-              <input
-                type="text"
-                class="form-control"
-                id="password"
-                minlength="8"
-                placeholder="minimum 8 characters"
-                required
-              />
-              <div class="invalid-feedback">
-                Your password should be minimum 8 characters
-              </div>
-            </div>
-            <div class="col-12">
-              <input type="checkbox" class="form-check-input" id="save-info" />
-              <label for="save-info" class="form-label">Remember me</label>
-            </div>
-          </div>
-          <hr class="my-4" />
-          <button
-            class="btn btn-primary w-100 my-3 btn-special btn-md"
-            type="submit"
-            id="btn-submit"
+    <main>
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+      >
+        <div class="row">
+          <!-- heading -->
+          <div
+            class="col-12 col-md-7 mt-lg-4 d-flex flex-column align-items-center align-items-md-start mx-auto mx-lg-0"
           >
-            Log in
-          </button>
-          <a href="#" class="text-decoration-none text-center"
-          ><p>Forgot password?</p></a
-        >
-        </form>
-
-        <div class="text-center my-4">
-          <button
-            type="submit"
-            class="btn btn-success btn-lg"
-            data-bs-toggle="modal"
-            data-bs-target="#createModal"
-          >
-            Create New Account
-          </button>
-        </div>
-        <!-- create modal -->
-        <div
-          class="modal fade"
-          id="createModal"
-          tabindex="-1"
-          aria-labelledby="createModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <!-- head of modal -->
-              <div class="modal-header">
-                <div>
-                  <h2 class="modal-title fs-5" id="createModalLabel">
-                    Sign Up
-                  </h2>
-                  <p class="text-muted fs-7">It´s quick and easy</p>
-                </div>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <!-- body of the modal -->
-              <div class="modal-body">
-                <!-- First name and Surname-->
-                <div
-                  class="row d-flex flex-column flex-lg-row justify-content-evenly mt-2 pt-2"
-                >
-                  <div class="col">
-                    <label for="name" class="form-label">First Name</label>
-                    <input type="text" class="form-control id="name">
-                  </div>
-                  <div class="col">
-                    <label for="last-name" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="last-name" />
-                  </div>
-                </div>
-                <!-- email -->
-                <div class="my-3">
-                  <label for="email" class="form-label"
-                    >Mobile number or email address</label
-                  >
-                  <input type="email" class="form-control id ="email">
-                </div>
-                <!-- password -->
-                <div class="my-3">
-                  <label for="password" class="form-label">New password</label>
-                  <input type="password" class="form-control id ="password">
-                </div>
-                <!-- DOB -->
-                <div class="my-3">
-                  <p class="text-muted">Date of birth</p>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <label for="date" class="form-label">Date</label>
-                    <select name="date" id="date" class="form-select">
-                      <option value="1"></option>
-                      <option value="1"></option>
-                      <option value="1"></option>
-                    </select>
-                  </div>
-                  <div class="col">
-                    <label for="month" class="form-label">Month</label>
-                    <select name="month" id="month" class="form-select">
-                      <option value="1"></option>
-                      <option value="1"></option>
-                      <option value="1"></option>
-                    </select>
-                  </div>
-                  <div class="col">
-                    <label for="year" class="form-label">Year</label>
-                    <select name="" id="" class="form-select">
-                      <option value="1"></option>
-                      <option value="1"></option>
-                      <option value="1">/option></option>
-                    </select>
-                  </div>
-                </div>
-                <!-- Gender select -->
-                <div class="row my-3">
-                  <p class="text-muted fs-6">Gender</p>
-                </div>
-                <div class="col my-2">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Male
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Female
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Undisclosed
-                    </label>
-                  </div>
-                </div>
-
-                <!-- disclaimer -->
-                <div class="mb-3">
-                  <span class="text-muted fs-7">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </span>
-                </div>
-                <!-- btn --
-                  <!-- footer of the modal -->
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-dismiss="modal"
-                  >
-                    Sign UP
-                  </button>
-                </div>
-              </div>
-            </div>
+            <p class="h1 text-primary fw-bold fs-0 mb-4">Bcreative</p>
+            <p class="w-75 fs-4 mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              neque dolores autem fugiat. Quisquam itaque hic cupiditate, totam
+              natus expedita incidunt tenetur iure dolorum atque dolorem
+              voluptate nemo consequatur id!
+            </p>
           </div>
-          <!-- end -->
+          <!-- form -->
+          <div class="col-12 col-md-5">
+            <form action="profile.html">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="password"
+                    minlength="8"
+                    placeholder="minimum 8 characters"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Your password should be minimum 8 characters
+                  </div>
+                </div>
+                <div class="col-12">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="save-info"
+                  />
+                  <label for="save-info" class="form-label">Remember me</label>
+                </div>
+              </div>
+              <hr class="my-4" />
+              <button
+                class="btn btn-primary w-100 my-3 btn-special btn-md"
+                type="submit"
+                id="btn-submit"
+              >
+                Log in
+              </button>
+              <a href="#" class="text-decoration-none text-center"
+                ><p>Forgot password?</p></a
+              >
+            </form>
+
+            <div class="text-center my-4">
+              <button
+                type="submit"
+                class="btn btn-success btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#createModal"
+              >
+                Create New Account
+              </button>
+            </div>
+            <!-- create modal -->
+            <div
+              class="modal fade"
+              id="createModal"
+              tabindex="-1"
+              aria-labelledby="createModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- head of modal -->
+                  <div class="modal-header">
+                    <div>
+                      <h2 class="modal-title fs-5" id="createModalLabel">
+                        Sign Up
+                      </h2>
+                      <p class="text-muted fs-7">It´s quick and easy</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <!-- body of the modal -->
+                  <div class="modal-body">
+                    <!-- First name and Surname-->
+                    <div
+                      class="row d-flex flex-column flex-lg-row justify-content-evenly mt-2 pt-2"
+                    >
+                      <div class="col">
+                        <label for="text" class="form-label">First Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="First name"
+                          id="text"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="last-name" class="form-label"
+                          >Last Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Last name"
+                          id="last-name"
+                        />
+                      </div>
+                    </div>
+                    <!-- email -->
+                    <div class="my-3">
+                      <label for="email" class="form-label"
+                        >Mobile number or email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control my-3"
+                        placeholder="Mobile number or email address"
+                      />
+                    </div>
+                    <!-- password -->
+                    <div class="my-3">
+                      <label for="password" class="form-label"
+                        >New password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control my-3"
+                        placeholder="New password"
+                      />
+                    </div>
+                    <!-- DOB -->
+                    <!-- Gender select -->
+                    <div class="row my-3">
+                      <p class="text-muted fs-6">Gender</p>
+                    </div>
+                    <div class="col my-2">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault3"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          Undisclosed
+                        </label>
+                      </div>
+                    </div>
+                    <!-- disclaimer -->
+                    <div class="my-3">
+                      <span class="text-muted fs-7">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </span>
+                    </div>
+                    <!-- footer of the modal -->
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                      >
+                        Sign UP
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end -->
+            </div>
+            <!-- create Modal -->
+          </div>
         </div>
-        <!-- create Modal -->
       </div>
-    </div>
+    </main>
+
+    <!-- footer -->
+    <footer
+      class="mt-7 pt-5 text-muted text-center text-small border-top border-gray"
+    >
+      <p class="mb-1">Bcreative © 2022</p>
+      <ul class="list-inline">
+        <li class="list-inline-item text-decoration-none">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+        <li class="list-inline-item"><a href="#">Cookies</a></li>
+      </ul>
+    </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

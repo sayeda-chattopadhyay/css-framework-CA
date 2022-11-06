@@ -4,114 +4,166 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="See, post and edit your profile page.">
-    <title>Bcreative  | Profile page</title>
+    <meta name="description" content="See, post and edit your profile page." />
+    <title>Bcreative | Profile page</title>
     <script
       src="https://kit.fontawesome.com/bdb94ef7c7.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/dist/css/styles.css" />
-  </head> 
+  </head>
   <body class="bg-gray">
     <!-- Top nav -->
-    <header
-      class="bg-white d-flex justify-content-center align-items-center fixed-top shadow "
-      style="min-height: 56px; z-index: 5"
-    >
       <!-- nav-->
-      <nav class="navbar navbar-expand-md">
+      <nav class="navbar navbar-expand-md bg-white d-flex justify-content-center align-items-center fixed-top shadow">
         <div class="container-fluid">
-          <a class="navbar-brand text-primary fw-bold" href="index.html">Bcreative</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand text-primary fw-bold" href="index.html"
+            >Bcreative</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- home -->
               <li class="nav-item">
-                <a class="nav-link text-primary" aria-current="page" href="index.html">Home</a>
+                <a
+                  class="nav-link text-primary"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
               </li>
+              <!-- profile -->
               <li class="nav-item">
-                <a class="nav-link active text-primary fw-bold" href="#">Profile</a>
+                <a class="nav-link active text-primary fw-bold" href="#"
+                  >Profile</a
+                >
               </li>
+              <!-- log -->
               <li class="nav-item">
-                <a class="nav-link text-primary text-danger fw-bold d-block d-md-none" " href="login.html">Log out</a>
+                <a
+                  class="nav-link text-primary text-danger"
+                  href="login.html"
+                  >Log out</a
+                >
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2 border border-primary" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn  btn-primary text-white" type="submit">Search</button>
-            </form> 
+              <input
+                class="form-control me-2 border border-primary"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary text-white" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
-      </nav> 
-
-
-  
-      
-     
-    </header>
-    <!------------------ main----------------> 
+      </nav>
+    <!-- main -->
     <main class="container-fluid mt-5">
-       <!-- hero section-->
+      <!-- hero section-->
       <div class="container border-bottom border-gray">
-        <div class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center">
-            <!-- Hero section -->
+        <div
+          class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center" >
+          <!-- Hero section -->
             <div class="col-12 col-md-6">
-                <img src="images/sayeda.img.jpg" alt="Profile image" class="rounded-circle me-2 img-fluid " style="width: 400px; height:400 px; object-fit: cover mb-5">
+              <img
+                src="images/sayeda.img.jpg"
+                alt="Profile image"
+                class="rounded-circle me-2 img-fluid"
+                style="width: 400px; height: 400px; object-fit: cover mb-5"
+              />
             </div>
             <div class="col-12 col-md-6 d-flex flex-column">
-                <div class="my-4">  
-                    <p class="fs-2">Sayeda</p>
-                    <p class="lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt dolorem deleniti corporis nulla quibusdam a suscipit. Voluptates culpa animi unde, aliquid et sint incidunt voluptatibus ut rem, magni rerum eaque incidunt voluptatibus ut rem, magni rerum eaque.</p>
+              <div class="my-4">
+                <p class="h1">Sayeda</p>
+                <p class="lh-lg">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Deserunt dolorem deleniti corporis nulla quibusdam a suscipit.
+                  Voluptates culpa animi unde, aliquid et sint incidunt
+                  voluptatibus ut rem, magni rerum eaque incidunt voluptatibus ut
+                  rem, magni rerum eaque.
+                </p>
+              </div>
+              <!-- details -->
+              <div
+                class="d-flex justify-content-between align-items-center border border-gray p-2"
+              >
+                <div class="d-f flex-column">
+                  <p class="fw-bold">Posts</p>
+                  <p>24</p>
                 </div>
-                <!-- details -->
-                <div class="d-flex justify-content-between align-items-center border border-gray p-2">
-                    <div class="d-f flex-column">
-                        <p class="fw-bold">Posts</p>
-                        <p>24</p>
-                    </div>
-                    <div class="d-f flex-column">
-                        <p class="fw-bold">Friends</p>
-                        <p>32</p>
-                    </div>
-                    <div class="d-f flex-column">
-                        <p class="fw-bold">Follower</p>
-                        <p>56</p>
-                    </div>
-                    <div class="d-f flex-column">
-                        <p class="fw-bold">Following</p>
-                        <p>82</p>
-                    </div>
-                </div> 
-                 <!-- create post -->
-                <div class=" col bg-white p-3 mt-3 rounded ms-auto w-100">
-                    <!-- avatar -->
-                    <div class="d-flex" type="button">
-                    <div class="p-1">
-                        <img
-                        src="images/sayeda.img.jpg"
-                        alt="avatar"
-                        class="rounded-circle me-2"
-                        style="width: 38px; height: 38px; object-fit: cover"
-                        />
-                    </div>
-                    <input
-                        type="text"
-                        class="form-control rounded-pill border border-2 border-gray bg-gray pointer"
-                        disabled
-                        placeholder="Hi! Message me here"
-                        data-bs-toggle="modal"
-                        data-bs-target="#createModal"
+                <div class="d-f flex-column">
+                  <p class="fw-bold">Friends</p>
+                  <p>32</p>
+                </div>
+                <div class="d-f flex-column">
+                  <p class="fw-bold">Follower</p>
+                  <p>56</p>
+                </div>
+                <div class="d-f flex-column">
+                  <p class="fw-bold">Following</p>
+                  <p>82</p>
+                </div>
+              </div>
+              <!-- create post -->
+              <div class="col bg-white p-3 mt-3 rounded ms-auto w-100">
+                <!-- avatar -->
+                <div class="d-flex">
+                  <div class="p-1">
+                    <img
+                      src="images/sayeda.img.jpg"
+                      alt="avatar"
+                      class="rounded-circle me-2"
+                      style="width: 38px; height: 38px; object-fit: cover"
                     />
-                    </div>
-                </div>  
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control rounded-pill border border-2 border-gray bg-gray pointer"
+                    disabled
+                    placeholder="Hi! Message me here"
+                  />
+                  <!-- inuput with button -->
+                  <!-- <div class="bg-gray p-3">
+                    <textarea
+                      rows="3"
+                      class="form-control no-resize"
+                      placeholder="Hi! message me here..."
+                    ></textarea>
+                    <a href="feed.html" class="btn btn-primary btn-sm mt-2"
+                      >Publish</a
+                    >
+                  <!-- inuput with button -->
+                  </div>
+                </div>
+                <!-- new -->
+
+                <!-- end -->
             </div>
         </div>
+        </div>
       </div>
-      <!-- ----------main body--------- -->
+      <!-- main body -->
       <div class="row justify-content-evenly mt-5">
-         <!-- Posts -->
-        <div class="col-12 col-lg-8 pb-5">
-          <div class="d-flex flex-column justify-content-center w-100 mx-auto" style="max-width: 680px">
+        <!-- Posts -->
+        <div class="col-12 col-lg-8 pb-lg-5">
+          <div
+            class="d-flex flex-column justify-content-center w-100 mx-auto"
+            style="max-width: 680px"
+          >
             <!--  posts -->
             <!--  post one -->
             <div class="bg-white p-4 rounded shadow mt-3">
@@ -133,7 +185,6 @@
                 <!-- edit -->
                 <i
                   class="fas fa-ellipsis-h"
-                  type="button"
                   id="post1Menu"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -145,13 +196,7 @@
                 >
                   <li class="d-flex align-items-center">
                     <a
-                      class="
-                        dropdown-item
-                        d-flex
-                        justify-content-around
-                        align-items-center
-                        fs-7
-                      "
+                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                       href="#"
                     >
                       Edit Post</a
@@ -159,13 +204,7 @@
                   </li>
                   <li class="d-flex align-items-center">
                     <a
-                      class="
-                        dropdown-item
-                        d-flex
-                        justify-content-around
-                        align-items-center
-                        fs-7
-                      "
+                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                       href="#"
                     >
                       Delete Post</a
@@ -176,34 +215,31 @@
               <!--  post content -->
               <div class="mt-3">
                 <!-- content -->
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
-                        <img
-                        src="images/alex-lvrs-On2VseHUDXw-unsplash.jpg"
-                        alt="post image"
-                        class="img-fluid rounded"
-                        width="300px"/>
-                    
-                        <p class="lh-lg p-3 mt-3">
-                            I made this make dolor sit amet consectetur adipisicing elit.
-                            Quae fuga incidunt consequatur tenetur doloremque officia
-                            corrupti provident tempore vitae labore.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Quae fuga incidunt consequatur tenetur doloremque officia
-                            corrupti provident tempore vitae labore?
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
-                  
+                <div
+                  class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3"
+                >
+                  <img
+                    src="images/alex-lvrs-On2VseHUDXw-unsplash.jpg"
+                    alt="decorating a cake"
+                    class="img-fluid rounded"
+                    width="300"
+                  />
+
+                  <p class="lh-lg p-3 mt-3">
+                    I made this make dolor sit amet consectetur adipisicing
+                    elit. Quae fuga incidunt consequatur tenetur doloremque
+                    officia corrupti provident tempore vitae labore.Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Quae fuga
+                    incidunt consequatur tenetur doloremque officia corrupti
+                    provident tempore vitae labore? Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit.
+                  </p>
                 </div>
                 <!-- likes & comments -->
                 <div class="post__comment mt-3 position-relative">
                   <!-- likes -->
                   <div
-                    class="
-                      d-flex
-                      align-items-center
-                      top-0
-                      start-0
- 
-                    "
+                    class="d-flex align-items-center top-0 start-0"
                     style="height: 50px; z-index: 5"
                   >
                     <div class="me-2">
@@ -211,61 +247,38 @@
                       <i class="text-danger fab fa-gratipay"></i>
                       <i class="text-warning fas fa-grin-squint"></i>
                     </div>
-                    <p class="m-0 text-muted fs-7">Rishan, Yash, and 3 others</p>
+                    <p class="m-0 text-muted fs-7">
+                      Rishan, Yash, and 3 others
+                    </p>
                   </div>
                   <!-- comments start-->
                   <div class="accordion" id="accordionExample">
                     <div class="accordion-item border-0">
                       <!-- comment collapse -->
-                      <h2 class="accordion-header" id="headingTwo">
+                      <div class="accordion-header" id="headingTwo">
                         <div
-                          class="
-                            accordion-button
-                            collapsed
-                            pointer
-                            d-flex
-                            justify-content-end
-                          "
+                          class="accordion-button collapsed pointer d-flex justify-content-end"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
                           aria-controls="collapsePost1"
                         >
-                        <div>
-                          <p class="m-0">2 Comments</p>
+                          <div>
+                            <p class="m-0">2 Comments</p>
+                          </div>
                         </div>
-   
-                        </div>
-                      </h2>
+                      </div>
                       <hr />
                       <!-- comment & like bar -->
                       <div class="d-flex justify-content-around">
                         <div
-                          class="
-                            dropdown-item
-                            rounded
-                            d-flex
-                            justify-content-center
-                            align-items-center
-                            pointer
-                            text-muted
-                            p-1
-                          "
+                          class="dropdown-item rounded d-flex justify-content-center align-items-center pointer text-muted p-1"
                         >
                           <i class="fas fa-thumbs-up me-3"></i>
                           <p class="m-0">Like</p>
                         </div>
                         <div
-                          class="
-                            dropdown-item
-                            rounded
-                            d-flex
-                            justify-content-center
-                            align-items-center
-                            pointer
-                            text-muted
-                            p-1
-                          "
+                          class="dropdown-item rounded d-flex justify-content-center align-items-center pointer text-muted p-1"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
@@ -315,13 +328,7 @@
                                 >
                                   <li class="d-flex align-items-center">
                                     <a
-                                      class="
-                                        dropdown-item
-                                        d-flex
-                                        justify-content-around
-                                        align-items-center
-                                        fs-7
-                                      "
+                                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                                       href="#"
                                     >
                                       Edit Comment</a
@@ -329,13 +336,7 @@
                                   </li>
                                   <li class="d-flex align-items-center">
                                     <a
-                                      class="
-                                        dropdown-item
-                                        d-flex
-                                        justify-content-around
-                                        align-items-center
-                                        fs-7
-                                      "
+                                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                                       href="#"
                                     >
                                       Delete Comment</a
@@ -403,7 +404,7 @@
                 </div>
               </div>
             </div>
-             <!--  post two -->
+            <!--  post two -->
             <div class="bg-white p-4 rounded shadow mt-3">
               <!--  author -->
               <div class="d-flex justify-content-between">
@@ -423,7 +424,6 @@
                 <!-- edit -->
                 <i
                   class="fas fa-ellipsis-h"
-                  type="button"
                   id="post1Menu"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -435,13 +435,7 @@
                 >
                   <li class="d-flex align-items-center">
                     <a
-                      class="
-                        dropdown-item
-                        d-flex
-                        justify-content-around
-                        align-items-center
-                        fs-7
-                      "
+                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                       href="#"
                     >
                       Edit Post</a
@@ -449,13 +443,7 @@
                   </li>
                   <li class="d-flex align-items-center">
                     <a
-                      class="
-                        dropdown-item
-                        d-flex
-                        justify-content-around
-                        align-items-center
-                        fs-7
-                      "
+                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                       href="#"
                     >
                       Delete Post</a
@@ -466,34 +454,31 @@
               <!--  post content -->
               <div class="mt-3">
                 <!-- content -->
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
-                        <img
-                        src="images/sayeda.makingcake.jpg"
-                        alt="post image"
-                        class="img-fluid rounded"
-                        width="300px"/>
-                    
-                        <p class="lh-lg p-3 mt-3">
-                            I made this make dolor sit amet consectetur adipisicing elit.
-                            Quae fuga incidunt consequatur tenetur doloremque officia
-                            corrupti provident tempore vitae labore.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Quae fuga incidunt consequatur tenetur doloremque officia
-                            corrupti provident tempore vitae labore?
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
-                  
+                <div
+                  class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3"
+                >
+                  <img
+                    src="images/sayeda.makingcake.jpg"
+                    alt="post image"
+                    class="img-fluid rounded"
+                    width="300"
+                  />
+
+                  <p class="lh-lg p-3 mt-3">
+                    I made this make dolor sit amet consectetur adipisicing
+                    elit. Quae fuga incidunt consequatur tenetur doloremque
+                    officia corrupti provident tempore vitae labore.Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Quae fuga
+                    incidunt consequatur tenetur doloremque officia corrupti
+                    provident tempore vitae labore? Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit.
+                  </p>
                 </div>
                 <!-- likes & comments -->
                 <div class="post__comment mt-3 position-relative">
                   <!-- likes -->
                   <div
-                    class="
-                      d-flex
-                      align-items-center
-                      top-0
-                      start-0
- 
-                    "
+                    class="d-flex align-items-center top-0 start-0"
                     style="height: 50px; z-index: 5"
                   >
                     <div class="me-2">
@@ -501,61 +486,38 @@
                       <i class="text-danger fab fa-gratipay"></i>
                       <i class="text-warning fas fa-grin-squint"></i>
                     </div>
-                    <p class="m-0 text-muted fs-7">Rishan, Yash, and 3 others</p>
+                    <p class="m-0 text-muted fs-7">
+                      Rishan, Yash, and 3 others
+                    </p>
                   </div>
                   <!-- comments start-->
                   <div class="accordion" id="accordionExample">
                     <div class="accordion-item border-0">
                       <!-- comment collapse -->
-                      <h2 class="accordion-header" id="headingTwo">
+                      <div class="accordion-header" id="headingTwo">
                         <div
-                          class="
-                            accordion-button
-                            collapsed
-                            pointer
-                            d-flex
-                            justify-content-end
-                          "
+                          class="accordion-button collapsed pointer d-flex justify-content-end"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
                           aria-controls="collapsePost1"
                         >
-                        <div>
-                          <p class="m-0">2 Comments</p>
+                          <div>
+                            <p class="m-0">2 Comments</p>
+                          </div>
                         </div>
-   
-                        </div>
-                      </h2>
+                      </div>
                       <hr />
                       <!-- comment & like bar -->
                       <div class="d-flex justify-content-around">
                         <div
-                          class="
-                            dropdown-item
-                            rounded
-                            d-flex
-                            justify-content-center
-                            align-items-center
-                            pointer
-                            text-muted
-                            p-1
-                          "
+                          class="dropdown-item rounded d-flex justify-content-center align-items-center pointer text-muted p-1"
                         >
                           <i class="fas fa-thumbs-up me-3"></i>
                           <p class="m-0">Like</p>
                         </div>
                         <div
-                          class="
-                            dropdown-item
-                            rounded
-                            d-flex
-                            justify-content-center
-                            align-items-center
-                            pointer
-                            text-muted
-                            p-1
-                          "
+                          class="dropdown-item rounded d-flex justify-content-center align-items-center pointer text-muted p-1"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
@@ -605,13 +567,7 @@
                                 >
                                   <li class="d-flex align-items-center">
                                     <a
-                                      class="
-                                        dropdown-item
-                                        d-flex
-                                        justify-content-around
-                                        align-items-center
-                                        fs-7
-                                      "
+                                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                                       href="#"
                                     >
                                       Edit Comment</a
@@ -619,13 +575,7 @@
                                   </li>
                                   <li class="d-flex align-items-center">
                                     <a
-                                      class="
-                                        dropdown-item
-                                        d-flex
-                                        justify-content-around
-                                        align-items-center
-                                        fs-7
-                                      "
+                                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                                       href="#"
                                     >
                                       Delete Comment</a
@@ -693,8 +643,8 @@
                 </div>
               </div>
             </div>
-             <!--  post three -->
-             <div class="bg-white p-4 rounded shadow mt-3">
+            <!--  post three -->
+            <div class="bg-white p-4 rounded shadow mt-3">
               <!--  author -->
               <div class="d-flex justify-content-between">
                 <!-- avatar -->
@@ -713,7 +663,6 @@
                 <!-- edit -->
                 <i
                   class="fas fa-ellipsis-h"
-                  type="button"
                   id="post1Menu"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -725,13 +674,7 @@
                 >
                   <li class="d-flex align-items-center">
                     <a
-                      class="
-                        dropdown-item
-                        d-flex
-                        justify-content-around
-                        align-items-center
-                        fs-7
-                      "
+                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                       href="#"
                     >
                       Edit Post</a
@@ -739,13 +682,7 @@
                   </li>
                   <li class="d-flex align-items-center">
                     <a
-                      class="
-                        dropdown-item
-                        d-flex
-                        justify-content-around
-                        align-items-center
-                        fs-7
-                      "
+                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                       href="#"
                     >
                       Delete Post</a
@@ -756,34 +693,31 @@
               <!--  post content -->
               <div class="mt-3">
                 <!-- content -->
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
-                        <img
-                        src="images/macarons.jpg"
-                        alt="beautiful colourful macarons"
-                        class="img-fluid rounded"
-                        width="300px"/>
-                    
-                        <p class="lh-lg p-3 mt-3">
-                            I made this receipt sit amet consectetur adipisicing elit.
-                            Quae fuga incidunt consequatur tenetur doloremque officia
-                            corrupti provident tempore vitae labore.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Quae fuga incidunt consequatur tenetur doloremque officia
-                            corrupti provident tempore vitae labore?
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
-                  
+                <div
+                  class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3"
+                >
+                  <img
+                    src="images/macarons.jpg"
+                    alt="beautiful colourful macarons"
+                    class="img-fluid rounded"
+                    width="300"
+                  />
+
+                  <p class="lh-lg p-3 mt-3">
+                    I made this receipt sit amet consectetur adipisicing elit.
+                    Quae fuga incidunt consequatur tenetur doloremque officia
+                    corrupti provident tempore vitae labore.Lorem ipsum, dolor
+                    sit amet consectetur adipisicing elit. Quae fuga incidunt
+                    consequatur tenetur doloremque officia corrupti provident
+                    tempore vitae labore? Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit.
+                  </p>
                 </div>
                 <!-- likes & comments -->
                 <div class="post__comment mt-3 position-relative">
                   <!-- likes -->
                   <div
-                    class="
-                      d-flex
-                      align-items-center
-                      top-0
-                      start-0
- 
-                    "
+                    class="d-flex align-items-center top-0 start-0"
                     style="height: 50px; z-index: 5"
                   >
                     <div class="me-2">
@@ -791,61 +725,38 @@
                       <i class="text-danger fab fa-gratipay"></i>
                       <i class="text-warning fas fa-grin-squint"></i>
                     </div>
-                    <p class="m-0 text-muted fs-7">Rishan, Yash, and 3 others</p>
+                    <p class="m-0 text-muted fs-7">
+                      Rishan, Yash, and 3 others
+                    </p>
                   </div>
                   <!-- comments start-->
                   <div class="accordion" id="accordionExample">
                     <div class="accordion-item border-0">
                       <!-- comment collapse -->
-                      <h2 class="accordion-header" id="headingTwo">
+                      <div class="accordion-header" id="headingTwo">
                         <div
-                          class="
-                            accordion-button
-                            collapsed
-                            pointer
-                            d-flex
-                            justify-content-end
-                          "
+                          class="accordion-button collapsed pointer d-flex justify-content-end"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
                           aria-controls="collapsePost1"
                         >
-                        <div>
-                          <p class="m-0">2 Comments</p>
+                          <div>
+                            <p class="m-0">2 Comments</p>
+                          </div>
                         </div>
-   
-                        </div>
-                      </h2>
+                      </div>
                       <hr />
                       <!-- comment & like bar -->
                       <div class="d-flex justify-content-around">
                         <div
-                          class="
-                            dropdown-item
-                            rounded
-                            d-flex
-                            justify-content-center
-                            align-items-center
-                            pointer
-                            text-muted
-                            p-1
-                          "
+                          class="dropdown-item rounded d-flex justify-content-center align-items-center pointer text-muted p-1"
                         >
                           <i class="fas fa-thumbs-up me-3"></i>
                           <p class="m-0">Like</p>
                         </div>
                         <div
-                          class="
-                            dropdown-item
-                            rounded
-                            d-flex
-                            justify-content-center
-                            align-items-center
-                            pointer
-                            text-muted
-                            p-1
-                          "
+                          class="dropdown-item rounded d-flex justify-content-center align-items-center pointer text-muted p-1"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
@@ -895,13 +806,7 @@
                                 >
                                   <li class="d-flex align-items-center">
                                     <a
-                                      class="
-                                        dropdown-item
-                                        d-flex
-                                        justify-content-around
-                                        align-items-center
-                                        fs-7
-                                      "
+                                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                                       href="#"
                                     >
                                       Edit Comment</a
@@ -909,13 +814,7 @@
                                   </li>
                                   <li class="d-flex align-items-center">
                                     <a
-                                      class="
-                                        dropdown-item
-                                        d-flex
-                                        justify-content-around
-                                        align-items-center
-                                        fs-7
-                                      "
+                                      class="dropdown-item d-flex justify-content-around align-items-center fs-7"
                                       href="#"
                                     >
                                       Delete Comment</a
@@ -987,38 +886,47 @@
         </div>
         <!-- Contacts -->
         <div class="col-12 col-lg-4">
-          <div class="d-none d-xxl-block h-100"
+          <div
+            class="h-100"
             style="
               max-width: 360px;
               width: 100%;
               z-index: 4;
               padding-top: 56px;
-              left: initial !important;">
-              <div class="d-flex justify-content-between align-items-center mt-5 border-bottom border-gray">
-                <p class="text-muted fs-4 m-3">My Contacts</p> 
-                <p class="text-muted fs-7 fw-bold m-3">View all</p> 
-              </div>
+              left: initial !important;
+            "
+          >
+            <div
+              class="d-flex justify-content-between align-items-center mt-5 border-bottom border-gray"
+            >
+              <p class="text-muted fs-4 m-3">My Contacts</p>
+              <p class="text-muted fs-7 fw-bold m-3">View all</p>
+            </div>
             <div class="p-3">
               <!-- My contacts -->
-              <div class="d-flex flex-column justify-content-between align-items-center ">
-
+              <ul
+                class="d-flex flex-column justify-content-between align-items-center"
+              >
                 <!-- friend 1 -->
-               <li class="d-flex align-items-center dropdown-item rounded my-1 px-0" type="button">
-                <div class="p-2">
-                  <img
-                    src="images/albert-dera-ILip77SbmOE-unsplash.jpg"
-                    alt="avatar"
-                    class="rounded-circle me-2"
-                    style="width: 38px; height: 38px; object-fit: cover"
-                  />
-                </div>
-                <div>
-                  <p class="m-0">James Williams</p>
-                </div>
-
-               </li>
+                <li
+                  class="d-flex align-items-center dropdown-item rounded my-1 px-0"
+                >
+                  <div class="p-2">
+                    <img
+                      src="images/albert-dera-ILip77SbmOE-unsplash.jpg"
+                      alt="avatar"
+                      class="rounded-circle me-2"
+                      style="width: 38px; height: 38px; object-fit: cover"
+                    />
+                  </div>
+                  <div>
+                    <p class="m-0">James Williams</p>
+                  </div>
+                </li>
                 <!-- friend 2 -->
-                <li class="d-flex align-items-center dropdown-item rounded my-1 px-0" type="button">
+                <li
+                  class="d-flex align-items-center dropdown-item rounded my-1 px-0"
+                >
                   <div class="p-2">
                     <img
                       src="images/F2.jpg"
@@ -1030,25 +938,27 @@
                   <div>
                     <p class="m-0">Olivia Jackson</p>
                   </div>
-  
                 </li>
-                  <!-- friend 3 -->
-                <li class="d-flex align-items-center dropdown-item rounded my-1 px-0" type="button">
-                    <div class="p-2">
-                      <img
-                        src="images/F3.jpg"
-                        alt="avatar"
-                        class="rounded-circle me-2"
-                        style="width: 38px; height: 38px; object-fit: cover"
-                      />
-                    </div>
-                    <div>
-                      <p class="m-0">Lucas Wyatt</p>
-                    </div>
-    
+                <!-- friend 3 -->
+                <li
+                  class="d-flex align-items-center dropdown-item rounded my-1 px-0"
+                >
+                  <div class="p-2">
+                    <img
+                      src="images/F3.jpg"
+                      alt="avatar"
+                      class="rounded-circle me-2"
+                      style="width: 38px; height: 38px; object-fit: cover"
+                    />
+                  </div>
+                  <div>
+                    <p class="m-0">Lucas Wyatt</p>
+                  </div>
                 </li>
                 <!-- friend 4 -->
-                <li class="d-flex align-items-center dropdown-item rounded my-1 px-0" type="button">
+                <li
+                  class="d-flex align-items-center dropdown-item rounded my-1 px-0"
+                >
                   <div class="p-2">
                     <img
                       src="images/F4.jpg"
@@ -1060,47 +970,27 @@
                   <div>
                     <p class="m-0">Eva Hudson</p>
                   </div>
-  
                 </li>
-              </div>
-              <div class="p-2 rounded mt-5 border-top border-gray">
-                <a
-                  href="login.html"
-                  class="
-                    d-flex
-                    align-items-center
-                    text-decoration-none text-dark  
-                  "
-                >
-                  <div class="p-2 d-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class=" text-primary bi bi-door-closed-fill" viewBox="0 0 16 16">
-                      <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="m-0 text-danger fw-bold">Log Out</p>
-                  </div>
-                </a>
-              </div>
+              </ul> 
             </div>
           </div>
         </div>
+      </div>
     </main>
-    <!------------------ footer---------------->
-    <footer class="mt-6 pt-5 text-muted text-center text-small border border-top border-gray">
-    <p class="mb-1">Bcreative © 2022 </p>
-    <ul class="list-inline">
-      <li class="list-inline-item text-decoration-none"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
-      <li class="list-inline-item"><a href="#">Cookies</a></li>
-    </ul>
+    <!-- footer -->
+    <footer
+      class="mt-6 pt-5 text-muted text-center text-small border border-top border-gray"
+    >
+      <p class="mb-1">Bcreative © 2022</p>
+      <ul class="list-inline">
+        <li class="list-inline-item text-decoration-none">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+        <li class="list-inline-item"><a href="#">Cookies</a></li>
+      </ul>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-
-
-
-
