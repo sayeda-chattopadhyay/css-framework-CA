@@ -35,7 +35,9 @@
           </div>
           <!-- form -->
           <div class="col-12 col-md-5">
-            <form action="profile.html">
+            <!-- old form -->
+
+            <!-- <form action="profile.html">
               <div class="row g-3">
                 <div class="col-12">
                   <label for="email" class="form-label">Email</label>
@@ -74,7 +76,7 @@
                 </div>
               </div>
               <hr class="my-4" />
-              <!-- log in button -->
+
               <button
                 class="btn btn-primary w-100 my-3 btn-special btn-md"
                 type="submit"
@@ -82,12 +84,40 @@
               >
                 Log in
               </button>
-              <!-- link to forget password -->
+
               <a href="#" class="text-decoration-none text-center"
                 ><p>Forgot password?</p></a
               >
+            </form> -->
+            <!-- new form -->
+            <form action="" id="loginForm">
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="The email value must be a valid stud.noroff.no or noroff.no email address."
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="password">password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  required
+                  minlength="8"
+                  title="The password value must be at least 8 characters."
+                />
+              </div>
+              <button class="btn btn-success">Login</button>
             </form>
-            <!-- Register account -->
+
+            <!-- login account -->
 
             <div class="text-center my-4">
               <button
@@ -99,147 +129,10 @@
                 Create New Account
               </button>
             </div>
-            <!-- create modal -->
-            <div
-              class="modal fade"
-              id="createModal"
-              tabindex="-1"
-              aria-labelledby="createModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <!-- head of modal -->
-                  <div class="modal-header">
-                    <div>
-                      <h2 class="modal-title fs-5" id="createModalLabel">
-                        Sign Up
-                      </h2>
-                      <p class="text-muted fs-7">It´s quick and easy</p>
-                    </div>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <!-- Register form start -->
-                  <div class="modal-body">
-                    <!-- First name and Surname-->
-                    <div
-                      class="row d-flex flex-column flex-lg-row justify-content-evenly mt-2 pt-2"
-                    >
-                      <div class="col">
-                        <label for="text" class="form-label">First Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="First name"
-                          id="text"
-                        />
-                      </div>
-                      <div class="col">
-                        <label for="last-name" class="form-label"
-                          >Last Name</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Last name"
-                          id="last-name"
-                        />
-                      </div>
-                    </div>
-                    <!-- email /  -->
-                    <div class="my-3">
-                      <label for="email" class="form-label"
-                        >Mobile number or email address</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control my-3"
-                        placeholder="Mobile number or email address"
-                      />
-                    </div>
-                    <!-- password -->
-                    <div class="my-3">
-                      <label for="password" class="form-label"
-                        >New password</label
-                      >
-                      <input
-                        type="password"
-                        class="form-control my-3"
-                        placeholder="New password"
-                      />
-                    </div>
-                    <!-- DOB -->
-                    <!-- Gender select -->
-                    <div class="row my-3">
-                      <p class="text-muted fs-6">Gender</p>
-                    </div>
-                    <div class="col my-2">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault1"
-                        />
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Male
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault2"
-                          checked
-                        />
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Female
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault3"
-                          checked
-                        />
-                        <label class="form-check-label" for="flexRadioDefault3">
-                          Undisclosed
-                        </label>
-                      </div>
-                    </div>
-                    <!-- disclaimer -->
-                    <div class="my-3">
-                      <span class="text-muted fs-7">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit.
-                      </span>
-                    </div>
-                    <!-- footer of the modal -->
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-bs-dismiss="modal"
-                      >
-                        Sign UP
-                      </button>
-                    </div>
-                  </div>
-                  <!-- Register form end -->
-                </div>
-              </div>
-              <!-- end -->
-            </div>
-            <!-- create Modal -->
           </div>
+          <!--  new form start-->
+
+          <!--  new form end -->
         </div>
       </div>
     </main>
@@ -259,5 +152,6 @@
       </ul>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/scss/js/index.mjs" type="module"></script>
   </body>
 </html>
