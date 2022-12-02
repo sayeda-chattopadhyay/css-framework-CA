@@ -2,16 +2,13 @@
 
 import { setRegisterFormListener } from "./handlers/register.mjs";
 
-// setRegisterFormListener();
-
 import { setLoginFormListener } from "./handlers/login.mjs";
 
-// import everything from index.mjs from post
-import * as post from "./api/posts/index.mjs";
+import * as templates from "./templates/index.mjs";
 
-// import { createPosts } from "./api/posts/index.mjs";
+import * as postMethods from "./api/posts/index.mjs";
 
-// setLoginFormListener();
+import { renderPostTemplate } from "./templates/index.mjs";
 
 const path = location.pathname;
 
@@ -22,6 +19,16 @@ if (path === "/login.html") {
 if (path === "/register.html") {
   setRegisterFormListener();
 }
+
+async function testTemplate() {
+  const posts = await postMethods.getPosts();
+  const post = posts[162];
+  //   console.log(post);
+  const container = document.querySelector("#post");
+  renderPostTemplate(post, container);
+}
+
+testTemplate();
 
 // create post form
 // document.querySelector("#create-post").addEventListener("click", function () {
@@ -54,11 +61,11 @@ if (path === "/register.html") {
 
 //  calling all post releted function
 
-// post.createPosts();
-// post.updatePost();
-// post.removePost();
-// post.getPosts().then(console.log);
-post.getPost(82).then(console.log);
+// postMethods.createPosts();
+// postMethods.updatePost();
+// postMethods.removePost();
+// postMethods.getPosts().then(console.log);
+// postMethods.getPost(162).then(console.log);
 
 // remove post
 // import {removePost} from "./api/posts/delete.mjs"
