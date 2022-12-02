@@ -11,7 +11,7 @@ export function setLoginFormListener() {
       const profile = Object.fromEntries(formData.entries());
       console.log(profile);
 
-      // send it to the Api
+      // send login form data to the Api throgh this below function login()
       login(profile);
     });
   }
