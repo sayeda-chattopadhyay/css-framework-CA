@@ -1,5 +1,6 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
-import * as storage from "../../handlers/storage/index.mjs";
+// import * as storage from "../../handlers/storage/index.mjs";
+import * as storage from "../../storage/index.mjs";
 
 const action = "/auth/login";
 const method = "post";
@@ -18,6 +19,8 @@ export async function login(profile) {
   });
 
   // const result = await response.json();
+
+  // destructuring(for storing profile and access token separately)
   const { accessToken, ...profileDetails } = await response.json();
   // console.log(result);
 
