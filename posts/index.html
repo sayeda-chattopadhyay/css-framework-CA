@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore creative works from entire world and share yours."
+    />
+    <title>Bcreative | Home page</title>
+    <script
+      src="https://kit.fontawesome.com/bdb94ef7c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-md bg-white d-flex justify-content-center align-items-center fixed-top shadow"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html"
+          >Bcreative</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-primary fw-bold"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="login.html">Log out</a>
+            </li>
+          </ul>
+          <!-- search field start -->
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 border border-primary"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-primary text-white" type="submit">
+              Search
+            </button>
+          </form>
+          <!-- search field end -->
+        </div>
+      </div>
+    </nav>
+    <main class="flex-grow-1 bg-dark text-light">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <!-- list of thumbnails -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="/src/scss/js/handlers/register.mjs" type="module"></script> -->
+    <script src="../src/scss/js/index.mjs" type="module"></script>
+  </body>
+</html>
