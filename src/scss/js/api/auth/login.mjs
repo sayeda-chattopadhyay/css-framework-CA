@@ -1,5 +1,4 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
-// import * as storage from "../../handlers/storage/index.mjs";
 import * as storage from "../../storage/index.mjs";
 
 const action = "/auth/login";
