@@ -6,12 +6,8 @@ export function postTemplateB(postData) {
   const post = document.createElement("div");
   post.classList.add("post");
   post.innerHTML = postData.title;
-  //   const button = document.createElement("button");
-  //   post.append(button)
   return post;
 }
-
-//  button.addEventListerner("click", ()=> console.log(poatdata))
 
 export function renderPostTemplate(postData, parent) {
   //   parent.innerHtml = postTemplate(postData);
