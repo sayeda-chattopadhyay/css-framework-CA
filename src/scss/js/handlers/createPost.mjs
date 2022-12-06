@@ -26,7 +26,7 @@ export function setCreatePostListener() {
 
 // problem can be here createPost(post)
 
-// Rohit code
+// Trying again
 
 // function setCreatePostListener() {
 //   const form = document.getElementById("createPost");

@@ -17,7 +17,6 @@ export function headers() {
 // option- 1
 
 export async function authFetch(url, options) {
-  // using spread operator. We want to include any of the options that we´ve defined already.(which is body:JSON.stringify on create.mjs file)
   return fetch(url, {
     ...options,
     headers: headers(),
