@@ -32,6 +32,5 @@ export async function register(profile) {
   }
 }
 
-//
-
-// new code
+// Note
+// here argument (profile) is the data provided by user while registering from
