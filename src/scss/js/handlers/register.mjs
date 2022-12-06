@@ -22,6 +22,12 @@ export function setRegisterFormListener() {
   }
 }
 
+// Note
+// here (profile) is the data provided by user while registering.
+// function register() is the function which sends the register info(here as profile) to the server with api fetch method post. This function lies inside /api/auth/ folder
+// setRegisterFormListener() selected html form(here as #registerForm- line-8), collected form data(here as profile variable- line-16 ) and send the data to API with another function named register() and argument profile.
+// We are calling setRegisterFormListener() in the index.mjs file
+
 // another option
 
 // const email = form.email.value;

@@ -16,3 +16,9 @@ export function setLoginFormListener() {
     });
   }
 }
+
+// Note
+// here (profile) is the data provided by user while loging.
+// function login() is the function which sends the login info(here as profile) to the server with api fetch method post. This function lies inside /api/auth/ folder
+// setLoginFormListener() selected html form(here as #loginForm- line-4), collected form data(here as profile variable- line-11 ) and send the data to API with another function named login() and argument as profile which is login info.
+// We are calling setLoginFormListener() in the index.mjs file
