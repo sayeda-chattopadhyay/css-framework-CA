@@ -11,7 +11,13 @@ export function postTemplateB(postData) {
   return post;
 }
 
+//  button.addEventListerner("click", ()=> console.log(poatdata))
+
 export function renderPostTemplate(postData, parent) {
   //   parent.innerHtml = postTemplate(postData);
   parent.append(postTemplateB(postData));
+}
+
+export function renderPostTemplates(postDataList, parent) {
+  parent.append(...postDataList.map(postTemplateB));
 }
