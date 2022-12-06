@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Bcreative. This website is for all who loves to share their creative works and inspire others."
+    />
+    <title>Bcreative | Register page</title>
+    <script
+      src="https://kit.fontawesome.com/bdb94ef7c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+      >
+        <div class="row">
+          <!-- heading -->
+          <div
+            class="col-12 col-md-7 mt-lg-4 d-flex flex-column align-items-center align-items-md-start mx-auto mx-lg-0"
+          >
+            <a href="../../index.html">
+              <p class="h1 text-primary fw-bold fs-0 mb-4">Bcreative</p>
+            </a>
+
+            <p class="w-75 fs-4 mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              neque dolores autem fugiat. Quisquam itaque hic cupiditate, totam
+              natus expedita incidunt tenetur iure dolorum atque dolorem
+              voluptate nemo consequatur id!
+            </p>
+          </div>
+          <!-- form -->
+          <div class="col-12 col-md-5">
+            <p class="h2">Register account</p>
+            <!-- register account form -->
+            <!-- Register form -->
+            <form action="" id="registerForm">
+              <div class="form-group mb-3">
+                <label for="name">Name</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  required
+                  pattern="^[\w]+$"
+                  title="The name value must not contain punctuation symbols apart from underscore (_). "
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="The email value must be a valid stud.noroff.no or noroff.no email address."
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="password">password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  required
+                  minlength="8"
+                  title="The password value must be at least 8 characters."
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="banner">Banner</label>
+                <input class="form-control" type="url" name="banner" />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="avatar">avatar</label>
+                <input class="form-control" type="url" name="avatar" />
+              </div>
+              <button class="btn btn-success">Register</button>
+            </form>
+            <div class="text-center my-4">
+              <p class="h3">Already have account</p>
+              <a href="../login/login.html">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer
+      class="mt-7 pt-5 text-muted text-center text-small border-top border-gray"
+    >
+      <p class="mb-1">Bcreative © 2022</p>
+      <ul class="list-inline">
+        <li class="list-inline-item text-decoration-none">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+        <li class="list-inline-item"><a href="#">Cookies</a></li>
+      </ul>
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../src/scss/js/index.mjs" type="module"></script>
+  </body>
+</html>
