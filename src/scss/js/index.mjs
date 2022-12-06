@@ -1,34 +1,42 @@
-// import * as constants from "./api/constant.mjs";
+import * as listeners from "./handlers/index.mjs";
 
-import { setRegisterFormListener } from "./handlers/register.mjs";
+import * as templates from "./templates/post.mjs";
 
-import { setLoginFormListener } from "./handlers/login.mjs";
-
-import * as templates from "./templates/index.mjs";
-
-import * as postMethods from "./api/posts/index.mjs";
-
-import { renderPostTemplate } from "./templates/index.mjs";
+import * as postMethods from "./api/posts/index.mjs"; // all CRUD functions are imported here as postMethods. If we need to run createPosts(). We have to call it as postMethods.createPosts()
 
 const path = location.pathname;
 
-if (path === "/login.html") {
-  setLoginFormListener();
+if (path === "/profile/login/login.html") {
+  listeners.setLoginFormListener();
+} else if (path === "/profile/register/register.html") {
+  listeners.setRegisterFormListener();
+} else if (path === "/post/create/index.html") {
+  listeners.setCreatePostListener();
+} else if (path === "/post/edit/index.html") {
+  listeners.setUpdatePostListener();
 }
 
-if (path === "/register.html") {
-  setRegisterFormListener();
-}
+// if (path === "/register.html") {
+//     setRegisterFormListener();
+//   }
 
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
-  const post = posts[162];
-  //   console.log(post);
-  const container = document.querySelector("#post");
-  renderPostTemplate(post, container);
-}
+// Test Function
 
-testTemplate();
+// async function testTemplate() {
+//   try {
+//     const posts = await postMethods.getPosts();
+//     const post = posts[162];
+//     console.log(post);
+//     const container = document.querySelector("#post");
+
+//     // render the post with the below function (the post will show inside the parent that is container here)
+//     renderPostTemplate(post, container);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// testTemplate();
 
 // create post form
 // document.querySelector("#create-post").addEventListener("click", function () {
@@ -64,7 +72,7 @@ testTemplate();
 // postMethods.createPosts();
 // postMethods.updatePost();
 // postMethods.removePost();
-// postMethods.getPosts().then(console.log);
+postMethods.getPosts().then(console.log);
 // postMethods.getPost(162).then(console.log);
 
 // remove post
@@ -75,7 +83,7 @@ testTemplate();
 
 // new Post
 
-// createPost({
+// listeners.createPost({
 //   title: "Greeting",
 //   body: "Have a good day",
 // });
