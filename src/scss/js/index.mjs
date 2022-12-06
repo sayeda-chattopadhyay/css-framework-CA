@@ -1,10 +1,10 @@
 import * as listeners from "./handlers/index.mjs";
-
 import * as templates from "./templates/post.mjs";
-
 import * as postMethods from "./api/posts/index.mjs"; // all CRUD functions are imported here as postMethods. If we need to run createPosts(). We have to call it as postMethods.createPosts()
 
 const path = location.pathname;
+
+console.log(path);
 
 if (path === "/profile/login/login.html") {
   listeners.setLoginFormListener();
@@ -16,27 +16,7 @@ if (path === "/profile/login/login.html") {
   listeners.setUpdatePostListener();
 }
 
-// if (path === "/register.html") {
-//     setRegisterFormListener();
-//   }
-
-// Test Function
-
-// async function testTemplate() {
-//   try {
-//     const posts = await postMethods.getPosts();
-//     const post = posts[162];
-//     console.log(post);
-//     const container = document.querySelector("#post");
-
-//     // render the post with the below function (the post will show inside the parent that is container here)
-//     renderPostTemplate(post, container);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// testTemplate();
+/////////////////////////////
 
 // create post form
 // document.querySelector("#create-post").addEventListener("click", function () {
@@ -72,7 +52,7 @@ if (path === "/profile/login/login.html") {
 // postMethods.createPosts();
 // postMethods.updatePost();
 // postMethods.removePost();
-postMethods.getPosts().then(console.log);
+// postMethods.getPosts().then(console.log);
 // postMethods.getPost(162).then(console.log);
 
 // remove post

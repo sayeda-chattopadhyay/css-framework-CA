@@ -10,7 +10,7 @@ export async function createPost(postData) {
     console.log(createPostUrl);
     const response = await authFetch(createPostUrl, {
       // headers: headers(),
-      // method,
+      method,
       body: JSON.stringify(postData),
     });
 
