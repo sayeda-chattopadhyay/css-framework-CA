@@ -13,7 +13,15 @@ export function setCreatePostListener() {
       const formData = new FormData(form);
       //   const post = Object.fromEntries(formData.entries());
       const postData = Object.fromEntries(formData.entries());
-      console.log(postData);
+      console.log("postData", postData);
+
+      if (!postData.tags.trim()) {
+        delete postData.tags;
+      } else {
+        postData.tags = postData.tags.split(",");
+      }
+
+      console.log("postData", postData);
 
       // Send it to the API
       createPost(postData);
