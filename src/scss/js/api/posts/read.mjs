@@ -54,6 +54,7 @@ export async function getPosts() {
 
     console.log(response);
     const posts = await response.json();
+
     createPostsHTML(posts);
 
     console.log(posts);
@@ -73,8 +74,22 @@ function createPostsHTML(posts) {
     postCard.innerHTML += `<a href="../../../../../post/specificPost/index.html?id=${post.id}" class="card ">
                                             <div class="card-body">
                                               <h2 class="card-title">${post.title}</h2>
-                                              <p class="card-text">${post.body}</p>                                             
-                                            </div>
-                            </a>`;
+                                              <p class="card-text">${post.body}</p>
+                                              <img src="${post.media}"/ >                                        
+                                            </div></a>`;
   });
 }
+
+///////////////
+
+// export async function getPost(id) {
+//   if (!id) {
+//     throw new Error("Required a postID");
+//   }
+
+//   const getPostUrl = `${API_SOCIAL_URL}${action}/${id}`;
+
+//   const response = await authFetch(getPostUrl);
+
+//   return await response.json();
+// }
