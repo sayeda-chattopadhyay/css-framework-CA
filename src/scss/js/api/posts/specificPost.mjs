@@ -1,10 +1,11 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
-const specificPostContainer = document.getElementById("specificPost");
 
 const querryString = document.location.search;
+console.log(querryString);
 
 const params = new URLSearchParams(querryString);
+console.log(params);
 
 const id = params.get("id");
 
@@ -40,7 +41,7 @@ export async function getPost(id) {
 
     // specificPostContainer.innerHTML = "";
 
-    // createHTML(postDetails);
+    createHTML(postDetails);
     // addModalFunction();
   } catch (error) {
     console.log(error);
@@ -51,17 +52,45 @@ export async function getPost(id) {
 getPost(id);
 
 function createHTML(details) {
-  specificPostContainer.innerHTML += ` <div class="details-card">
-                                    <div class="details-card-image"><img src="${details.jetpack_featured_media_url}" alt= "${details.title.rendered}" class="specific-image"></div>
-                                    <div class= "details-card-text">
-                                        <h1>${details.title.rendered}</h1>
-                                        <p class="blog-date">Published: ${details.date}</p>  
-                                        <p>${details.content.rendered}</p> 
-                                    </div>    
-                                  </div>`;
+  const specificPostContainer = document.getElementById("specificPost");
+
+  specificPostContainer.innerHTML += ` <div class="card" style="width: 18rem;">
+                                            <div class="">
+                                                <img src="${details.media}" class="card-img-top img-thumbnail style="width: 18rem;height : 18rem;" alt="${details.title}"/> 
+                                            </div>
+                                            <div class="card-body">
+                                                <h2 class="card-title">${details.title}</h2>
+                                                <p class="card-text">${details.body}</p>
+                                                <p class="card-text">By ${details.author}</p>
+                                                <p class="card-text">By ${details.created}</p> 
+                                                 
+                                            </div>    
+                                        </div>`;
 }
 
 //**********************
+
+// `
+// <div class="d-flex justify-content-center border border-primary my-4 ">
+// <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="card" style="width: 18rem;">
+//                                         <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem;height : 18rem;" alt="${post.title}"/ >
+//                                         <div class="card-body">
+//                                           <h2 class="card-title">${post.title}</h2>
+//                                           <p class="card-text">${post.body}</p>
+//                                           <p>By ${post.author}</p>
+//                                           <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="btn btn-primary">View Post</a>
+//                                         </div>
+// </a>
+// </div>`
+
+// <div class="card" style="width: 18rem;">
+// <img src="..." class="card-img-top" alt="...">
+// <div class="card-body">
+//   <h5 class="card-title">Card title</h5>
+//   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//   <a href="#" class="btn btn-primary">Go somewhere</a>
+// </div>
+// </div>
 
 // export async function getPosts() {
 //   const getPostUrl = API_SOCIAL_URL + action;
