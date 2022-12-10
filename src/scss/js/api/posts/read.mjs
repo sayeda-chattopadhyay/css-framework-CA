@@ -65,7 +65,7 @@ export async function getPosts() {
 
 getPosts();
 
-//****************************GET posts and send it to html page *********************/
+//****************************GET posts and create html page *********************/
 
 const postCardsContainer = document.getElementById("postCardsContainer");
 
@@ -74,7 +74,7 @@ function createPostsHTML(posts) {
     postCardsContainer.innerHTML += `
     <div class="d-flex justify-content-center border border-primary my-4 ">
     <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="card" style="width: 18rem;">
-                                            <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem;height : 18rem;" alt="${post.title}"/ > 
+                                            <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem; height : 18rem;" alt="${post.title}"/ > 
                                             <div class="card-body">
                                               <h2 class="card-title">${post.title}</h2>
                                               <p class="card-text">${post.body}</p>
