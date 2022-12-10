@@ -10,9 +10,10 @@
 
 //   const response = await fetch(getPostUrl);
 
-//   return await response.json();
-//   //   const myupdatedPost = await response.json();
-//   //   console.log(myupdatedPost);
+// const posts = await response.json();
+
+//   return posts
+//
 // }
 
 ///////////////
@@ -34,7 +35,7 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
 
-const action = "/posts";
+const action = "/posts/?_author=true&_comments=true&_reactions=true";
 
 export async function getPosts() {
   const getPostUrl = API_SOCIAL_URL + action;
@@ -48,8 +49,6 @@ export async function getPosts() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      //   method: "GET",
-      //   body: JSON.stringify(postData),
     });
 
     console.log(response);
@@ -71,6 +70,7 @@ const postCardsContainer = document.getElementById("postCardsContainer");
 
 function createPostsHTML(posts) {
   posts.forEach(function (post) {
+    console.log(post);
     postCardsContainer.innerHTML += `
     <div class="d-flex justify-content-center border border-primary my-4 ">
     <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="card" style="width: 18rem;">
@@ -78,7 +78,13 @@ function createPostsHTML(posts) {
                                             <div class="card-body">
                                               <h2 class="card-title">${post.title}</h2>
                                               <p class="card-text">${post.body}</p>
-                                              <p>By ${post.author}</p>
+                                              <p>By ${post.author.name}</p>
+                                              <p>Date: ${post.created}</p>
+                                              <p>comment:${post.comments}</p>
+                                              <p>reactions:${post.reaction}</p>
+
+                                           
+
                                               <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="btn btn-primary">View Post</a>                                      
                                             </div>
  </a>
