@@ -17,16 +17,20 @@ export async function login(profile) {
     body,
   });
 
-  // destructuring(for storing profile and access token separately)
-  const { accessToken, ...profileDetails } = await response.json(); // this will help to store access token and all apart from access token separately.
+  if (response.ok) {
+    const { accessToken, ...profileDetails } = await response.json(); // this will help to store access token and all apart from access token separately.
 
-  storage.save("token", accessToken);
+    storage.save("token", accessToken);
 
-  storage.save("profile", profileDetails);
+    storage.save("profile", profileDetails);
 
-  alert("You are now logged in");
+    // alert("You are now logged in");
+  } else {
+    throw new Error("Incorrect username or password");
+  }
 }
 
+// destructuring(for storing profile and access token separately)
 // Note
 
 //  In login() function we need to get the result to store.
