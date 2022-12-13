@@ -76,7 +76,7 @@ export function createProfileDetailsHTML(profile) {
           </div>
       </div>
       <div class="my-4">
-          <a href="../../../../../../profile/edit/index.html?id=${profile.id}" class="btn btn-primary">Edit Profile</a>
+          <a href="../../../../../../profile/edit/index.html?name=${profile.name}" class="btn btn-primary">Edit Profile</a>
       </div>
 
   </div>

@@ -2,7 +2,7 @@
 
 // export * from "../api/posts/update.mjs";
 
-import { updateProfile } from "../api/profile/update.mjs";
+import { updateProfile } from "../api/profile/profileDetails/update.mjs";
 // import { getPost } from "../api/posts/specificPost.mjs";
 
 export async function setUpdateProfileListener() {
