@@ -5,38 +5,38 @@ const action = "/profiles/";
 
 const token = load("token");
 console.log(token);
+
 const profile = load("profile");
 const profileName = profile.name;
-const profileEmail = profile.email;
-const profilBanner = profile.banner;
-const profilAvatar = profile.avatar;
+
+// const profileEmail = profile.email;
+// const profilBanner = profile.banner;
+// const profilAvatar = profile.avatar;
 
 const getProfileUrl = API_SOCIAL_URL + action + profileName;
 console.log(getProfileUrl);
 
-const getProfileMediaUrl = getProfileUrl + "/media";
-console.log(getProfileMediaUrl);
+// const getProfileMediaUrl = getProfileUrl + "/media";
+// console.log(getProfileMediaUrl);
 
 const getProfilePostsUrl = getProfileUrl + "/posts";
 console.log(getProfilePostsUrl);
 
 // //////***********profile details ***************/
 
-export async function getProfile() {}
-
 export async function getProfilePosts() {
   try {
-    const UserName = document.getElementById("UserName");
-    const userAvatar = document.getElementById("userAvatar");
-    const userEmail = document.getElementById("userEmail");
+    // const UserName = document.getElementById("UserName");
+    // const userAvatar = document.getElementById("userAvatar");
+    // const userEmail = document.getElementById("userEmail");
 
-    UserName.innerHTML = `Hi! ${profileName}`;
-    userAvatar.innerHTML = `<img
-    src="profilAvatar"
-    alt="Profile image"
-    class="rounded-circle me-2 img-fluid"
-    style="width: 400px; height: 400px; object-fit: cover mb-5"`;
-    userEmail.innerHTML = `Email Id: ${profileEmail}`;
+    // UserName.innerHTML = `Hi! ${profileName}`;
+    // userAvatar.innerHTML = `<img
+    // src="profilAvatar"
+    // alt="Profile image"
+    // class="rounded-circle me-2 img-fluid"
+    // style="width: 400px; height: 400px; object-fit: cover mb-5"`;
+    // userEmail.innerHTML = `Email Id: ${profileEmail}`;
 
     const response = await fetch(getProfilePostsUrl, {
       headers: {
@@ -58,8 +58,6 @@ export async function getProfilePosts() {
   }
 }
 getProfilePosts();
-
-//// GET /api/v1/social/profiles/<name>
 
 //****************************GET posts and create html page *********************/
 

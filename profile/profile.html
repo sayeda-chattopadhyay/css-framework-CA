@@ -75,52 +75,61 @@
     </nav>
     <!-- main -->
     <main class="container-fluid mt-5">
+      <div id="UserDetails">
+
+      </div>
+
+
       <!-- hero section-->
-      <div class="container mb-4 border-bottom border-gray">
-        <div
+      <div class="container mb-4 border-bottom border-gray" id="profileDetail">
+      </div>
+
+      <!-- old code -->
+      <div >
+        <!-- <div
           class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center"
         >
           <!-- Hero image -->
-          <div class="col-12 col-md-6" id="userAvatar">
+          <!-- <div class="col-12 col-md-6" id="userAvatar">
             <!-- <img
               src=""
               alt="Profile image"
               class="rounded-circle me-2 img-fluid"
               style="width: 400px; height: 400px; object-fit: cover mb-5"
             /> -->
-          </div>
+          <!-- </div>
           <!-- Hero details -->
-          <div class="col-12 col-md-6 d-flex flex-column">
+          <!-- <div class="col-12 col-md-6 d-flex flex-column">
             <!-- user details -->
-            <div class="my-4">
+            <!-- <div class="my-4">
               <p class="h1" id="UserName"></p>
               <p class="lh-lg" id="userEmail"></p>
             </div>
-            <!-- follower details -->
-            <div
+            follower details -->
+            <!-- <div
               class="d-flex justify-content-between align-items-center border border-gray p-2"
             >
               <div class="d-f flex-column">
                 <p class="fw-bold" id="userPosts">Posts</p>
                 <p>24</p>
               </div>
-              <div class="d-f flex-column id="userFriends">
-                <p class="fw-bold">Friends</p>
+              <!-- <div class="d-f flex-column >
+                <p class="fw-bold" id="userFriends">Friends</p>
                 <p>32</p>
-              </div>
-              <div class="d-f flex-column id="userFriends"">
-                <p class="fw-bold">Follower</p>
+              </div> -->
+              <!-- <div class="d-f flex-column">
+                <p class="fw-bold" id="userFollowes">Follower</p>
                 <p>56</p>
               </div>
-              <div class="d-f flex-column ">
-                <p class="fw-bold">Following</p>
+              <div class="d-f flex-column">
+                <p class="fw-bold" id="userFollowing">Following</p>
                 <p>82</p>
               </div>
-            </div>
-            <!-- create post -->
-            <div class="bg-white p-3 mt-3 rounded border">
+            </div>  -->
+      
+            <!-- <div class="bg-white p-3 mt-3 rounded border">
               <!-- avatar -->
-              <div class="d-flex">
+              <!-- <div class="d-flex">
                 <div class="p-1">
                   <img
                     src=""
@@ -138,8 +147,8 @@
                   data-bs-target="#createModal"
                 />
               </div>
-            </div>
-            <!-- create modal -->
+            </div>  -->
+       
             <div
               class="modal fade"
               id="createModal"
@@ -150,7 +159,7 @@
             >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                  <!-- head -->
+                  <!-- head
                   <div class="modal-header align-items-center">
                     <div
                       class="h3 text-dark text-center w-100 m-0"
@@ -250,9 +259,9 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
-        </div>
+        </div> 
       </div>
       <!-- main body -->
       <div class="container border border-primary">
@@ -263,23 +272,22 @@
           <div class="col-12 col-md-12 col-lg-8">
             <!--  My posts -->
             <div class="bg-white p-4 rounded shadow mt-3">
-
-               <!-- Search MyPost -->
-               <h2>Search Post</h2>
-               <form id = "searchForm" class= "d-flex" >
+              <!-- Search MyPost -->
+              <h2>Search Post</h2>
+              <form id="searchForm" class="d-flex">
                 <div class="form-group mb-3">
                   <input
-                  class="form-control"
-                  type="search"
-                  name="searchBar"
-                  id="searchBar"
-                  placeholder="search"
-              />
+                    class="form-control"
+                    type="search"
+                    name="searchBar"
+                    id="searchBar"
+                    placeholder="search"
+                  />
                 </div>
                 <button class="btn btn-success">Search</button>
               </form>
 
-                  <!-- All  mY posts -->
+              <!-- All  mY posts -->
 
               <h2>All my posts</h2>
               <div class="" id="postCardsContainer"></div>
@@ -293,9 +301,7 @@
                 class="d-flex justify-content-between align-items-center mt-5 border-bottom border-gray"
               >
                 <p class="text-muted fs-5 m-3">Your Friends</p>
-                <div class="" id = "registerdUsers">
-
-                </div>
+                <div class="" id="registerdUsers"></div>
               </div>
               <!-- friend name -->
               <!-- <div class="p-3">
@@ -339,11 +345,19 @@
       </ul>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../src/scss/js/api/profile/post/index.mjs" type="module"></script>
-    <script src="../src/scss/js/api/posts/getRegisteredProfiles.mjs" type="module"></script>
+    <!-- <script
+      src="../src/scss/js/api/profile/post/index.mjs"
+      type="module"
+    ></script> -->
+    <script
+      src="../src/scss/js/api/profile/profileDetails/index.mjs"
+      type="module"
+    ></script>
+    <script
+      src="../src/scss/js/api/posts/getRegisteredProfiles.mjs"
+      type="module"
+    ></script>
     <!-- <script src="../src/scss/js/views/posts/displayAllRegisteredProfiles.mjs" type="module"></script> -->
     <!-- <script src="../src/scss/js/search/index.mjs" type="module"></script> -->
-
-
   </body>
 </html>
