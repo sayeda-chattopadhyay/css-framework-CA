@@ -31,8 +31,6 @@ export async function getPost(id) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      //   method: "GET",
-      //   body: JSON.stringify(postData),
     });
 
     const postDetails = await response.json();

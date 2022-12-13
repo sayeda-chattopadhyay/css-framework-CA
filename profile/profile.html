@@ -81,40 +81,38 @@
           class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center"
         >
           <!-- Hero image -->
-          <div class="col-12 col-md-6">
-            <img
+          <div class="col-12 col-md-6" id="userAvatar">
+            <!-- <img
               src=""
               alt="Profile image"
               class="rounded-circle me-2 img-fluid"
               style="width: 400px; height: 400px; object-fit: cover mb-5"
-            />
+            /> -->
           </div>
           <!-- Hero details -->
           <div class="col-12 col-md-6 d-flex flex-column">
             <!-- user details -->
             <div class="my-4">
-              <p class="h1">Sayeda</p>
-              <p class="lh-lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
+              <p class="h1" id="UserName"></p>
+              <p class="lh-lg" id="userEmail"></p>
             </div>
             <!-- follower details -->
             <div
               class="d-flex justify-content-between align-items-center border border-gray p-2"
             >
               <div class="d-f flex-column">
-                <p class="fw-bold">Posts</p>
+                <p class="fw-bold" id="userPosts">Posts</p>
                 <p>24</p>
               </div>
-              <div class="d-f flex-column">
+              <div class="d-f flex-column id="userFriends">
                 <p class="fw-bold">Friends</p>
                 <p>32</p>
               </div>
-              <div class="d-f flex-column">
+              <div class="d-f flex-column id="userFriends"">
                 <p class="fw-bold">Follower</p>
                 <p>56</p>
               </div>
-              <div class="d-f flex-column">
+              <div class="d-f flex-column ">
                 <p class="fw-bold">Following</p>
                 <p>82</p>
               </div>
@@ -257,7 +255,7 @@
         </div>
       </div>
       <!-- main body -->
-      <div class="container">
+      <div class="container border border-primary">
         <div
           class="row d-flex flex-column flex-lg-row justify-content-between align-items-start mt-5"
         >
@@ -265,6 +263,24 @@
           <div class="col-12 col-md-12 col-lg-8">
             <!--  My posts -->
             <div class="bg-white p-4 rounded shadow mt-3">
+
+               <!-- Search MyPost -->
+               <h2>Search Post</h2>
+               <form id = "searchForm" class= "d-flex" >
+                <div class="form-group mb-3">
+                  <input
+                  class="form-control"
+                  type="search"
+                  name="searchBar"
+                  id="searchBar"
+                  placeholder="search"
+              />
+                </div>
+                <button class="btn btn-success">Search</button>
+              </form>
+
+                  <!-- All  mY posts -->
+
               <h2>All my posts</h2>
               <div class="" id="postCardsContainer"></div>
               <!--  author -->
@@ -276,8 +292,10 @@
               <div
                 class="d-flex justify-content-between align-items-center mt-5 border-bottom border-gray"
               >
-                <p class="text-muted fs-5 m-3">Your Contacts</p>
-                <p class="text-muted fs-7 m-3">View all</p>
+                <p class="text-muted fs-5 m-3">Your Friends</p>
+                <div class="" id = "registerdUsers">
+
+                </div>
               </div>
               <!-- friend name -->
               <!-- <div class="p-3">
@@ -322,5 +340,10 @@
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../src/scss/js/api/posts/profile.mjs" type="module"></script>
+    <script src="../src/scss/js/api/posts/getRegisteredProfiles.mjs" type="module"></script>
+    <!-- <script src="../src/scss/js/views/posts/displayAllRegisteredProfiles.mjs" type="module"></script> -->
+    <script src="../src/scss/js/search/index.mjs" type="module"></script>
+
+
   </body>
 </html>

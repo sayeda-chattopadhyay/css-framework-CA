@@ -15,11 +15,11 @@ export function setCreatePostListener() {
       const postData = Object.fromEntries(formData.entries());
       console.log("postData", postData);
 
-      if (!postData.tags.trim()) {
-        delete postData.tags;
-      } else {
-        postData.tags = postData.tags.split(",");
-      }
+      // if (!postData.tags.trim()) {
+      //   delete postData.tags;
+      // } else {
+      //   postData.tags = postData.tags.split(",");
+      // }
 
       console.log("postData", postData);
 

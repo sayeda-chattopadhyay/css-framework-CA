@@ -1,39 +1,8 @@
-// import { API_SOCIAL_URL } from "../constant.mjs";
-
-// // import { authFetch } from "../authorizedFetch.mjs";
-
-// // const action = "/posts";
-// const method = "get";
-
-// export async function getPosts() {
-//   const getPostUrl = `${API_SOCIAL_URL}${action}`;
-
-//   const response = await fetch(getPostUrl);
-
-// const posts = await response.json();
-
-//   return posts
-//
-// }
-
-///////////////
-
-// export async function getPost(id) {
-//   if (!id) {
-//     throw new Error("Required a postID");
-//   }
-
-//   const getPostUrl = `${API_SOCIAL_URL}${action}/${id}`;
-
-//   const response = await authFetch(getPostUrl);
-
-//   return await response.json();
-// }
-
 //****************************GET POSTS *********************/
 
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
+// import { createPostsHTML } from "../../views/posts/displayAllPosts.mjs";
 
 const action = "/posts/?_author=true&_comments=true&_reactions=true";
 
@@ -54,6 +23,8 @@ export async function getPosts() {
     console.log(response);
     const posts = await response.json();
 
+    // return posts;
+
     createPostsHTML(posts);
 
     console.log(posts);
@@ -63,18 +34,46 @@ export async function getPosts() {
 }
 
 getPosts();
+//******************* Get posts end *******************/
+
+// ********************Search Bar************
+
+const searchBar = document.getElementById("searchBar");
+console.log(searchBar);
+
+let posts = [];
+
+searchBar.addEventListener("keyup", (event) => {
+  console.log(event);
+
+  const searchValue = event.target.value;
+  console.log(searchValue);
+
+  console.log(posts);
+
+  const filteredPosts = posts.filter((post) => {
+    const authorName = post.author.name;
+    console.log(authorName);
+    return (
+      post.author.name.toLowerCase().includes(searchValue) ||
+      post.title.toLowerCase().includes(searchValue)
+    );
+  });
+  console.log(filteredPosts);
+});
+
+// ********************Search Bar End ************
 
 //****************************GET posts and create html page *********************/
 
-const postCardsContainer = document.getElementById("postCardsContainer");
-
-function createPostsHTML(posts) {
+export function createPostsHTML(posts) {
+  const postCardsLists = document.getElementById("postCardsLists");
   posts.forEach(function (post) {
     console.log(post);
-    postCardsContainer.innerHTML += `
+    postCardsLists.innerHTML += `
     <div class="d-flex justify-content-center border border-primary my-4 ">
     <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="card" style="width: 18rem;">
-                                            <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem; height : 18rem;" alt="${post.title}"/ > 
+                                            <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem; height : 18rem;" alt="${post.title}"/ >
                                             <div class="card-body">
                                               <h2 class="card-title">${post.title}</h2>
                                               <p class="card-text">${post.body}</p>
@@ -82,26 +81,69 @@ function createPostsHTML(posts) {
                                               <p>Date: ${post.created}</p>
                                               <p>comment:${post.comments}</p>
                                               <p>reactions:${post.reaction}</p>
-
-                                           
-
-                                              <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="btn btn-primary">View Post</a>                                      
+                                              <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="btn btn-primary">View Post</a>
                                             </div>
  </a>
  </div>`;
   });
 }
 
-// <div class="card" style="width: 18rem;">
-// <img src="..." class="card-img-top" alt="...">
-// <div class="card-body">
-//   <h5 class="card-title">Card title</h5>
-//   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//   <a href="#" class="btn btn-primary">Go somewhere</a>
-// </div>
-// </div>
+// ********************Search Bar end ************
+// *********************get single post***************
 
-///////////////
+// export async function getSinglePost(id) {
+//   if (!id) {
+//     throw new Error("Required a postID");
+//   }
+
+//   const getPostUrl = `${API_SOCIAL_URL}${action}/${id}`;
+
+//   const response = await authFetch(getPostUrl);
+
+//   return await response.json();
+// }
+
+// const querryString = document.location.search;
+// console.log(querryString);
+
+// const params = new URLSearchParams(querryString);
+// console.log(params);
+
+// const id = params.get("id");
+
+// console.log(id);
+
+// // const action = "/posts";
+
+// export async function getPost(id) {
+//   try {
+//     if (!id) {
+//       throw new Error("Required a postID");
+//     }
+//     const getPostUrl = `${API_SOCIAL_URL}${action}/${id}`;
+
+//     console.log(getPostUrl);
+
+//     const token = load("token");
+
+//     console.log(token);
+
+//     const response = await fetch(getPostUrl, {
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+
+//     const postDetails = await response.json();
+
+//     console.log(postDetails);
+
+//     return postDetails;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
 // export async function getPost(id) {
 //   if (!id) {

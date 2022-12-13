@@ -15,6 +15,10 @@ export function remove(key) {
   localStorage.removeItem(key);
 }
 
+export function clear() {
+  localStorage.clear;
+}
+
 // Note
 // We use save() function to store access token and user details to the local storage in order to use for future. Here key is (name) and value is (value as JSON format ).
 

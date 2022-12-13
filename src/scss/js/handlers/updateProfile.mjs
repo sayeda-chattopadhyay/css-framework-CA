@@ -2,26 +2,20 @@
 
 // export * from "../api/posts/update.mjs";
 
-import { updatePost } from "../api/posts/update.mjs";
+import { updateProfile } from "../api/profile/update.mjs";
 // import { getPost } from "../api/posts/specificPost.mjs";
 
-export async function setUpdatePostListener() {
-  const form = document.querySelector("#updatePost"); //line 74
-
-  // const url = new URL(location.href); // new url class
-  // const id = url.searchParams.get("id"); // to get id parameter from url
-
-  // console.log(id);
-
+export async function setUpdateProfileListener() {
+  const form = document.querySelector("#updateProfile");
   if (form) {
     // const button = form.querySelector("button");
     // button.disabled = true;
-    // const post = await getPost(id);
+    // const profile = await getProfile(name);
 
-    // form.title.value = post.title;
-    // form.body.value = post.value;
-    // form.tags.value = post.tags;
-    // form.media.value = post.media;
+    // form.name.value = profile.name;
+    // form.email.value = profile.email;
+    // form.banner.value = profile.banner;
+    // form.avatar.value = profile.avatar;
 
     // button.disabled = false;
 
@@ -29,8 +23,8 @@ export async function setUpdatePostListener() {
       event.preventDefault();
       const form = event.target;
       const formData = new FormData(form);
-      const post = Object.fromEntries(formData.entries());
-      console.log(post);
+      const profile = Object.fromEntries(formData.entries());
+      console.log(profile);
       // post.id = id;
 
       // if (!post.tags.trim()) {
@@ -41,9 +35,9 @@ export async function setUpdatePostListener() {
       // console.log("post", post);
 
       // Send it to the API
-      updatePost(post);
+      updateProfile(profile);
     });
   }
 }
 
-setUpdatePostListener();
+setUpdateProfileListener();

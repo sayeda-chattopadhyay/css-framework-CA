@@ -1,34 +1,3 @@
-// import { API_SOCIAL_URL } from "../constant.mjs";
-// import { headers } from "../authorizedFetch.mjs";
-//import { load } from "../../storage/index.mjs";
-
-// const action = "/posts";
-// const method = "POST";
-
-// export async function createPost(postData) {
-//   try {
-//     const createPostUrl = API_SOCIAL_URL + action;
-//     console.log(createPostUrl);
-//     const response = await fetch(createPostUrl, {
-//       // headers: headers(),
-//       method,
-//       body: JSON.stringify(postData),
-//     });
-
-//     return await response.json();
-//     // const myCreatedPost = await response.json();
-//     // console.log(myCreatedPost);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-/////********************************************* */
-
-////////////////////////Wednessday///////////////////
-
-// OPTION-1 again create this function without using authFetch()
-
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
 
@@ -39,8 +8,6 @@ export async function createPost(postData) {
 
   console.log(createPostUrl);
   console.log(postData);
-
-  //   const token = localStorage.getItem(key);
   const token = load("token");
   console.log(token);
 
