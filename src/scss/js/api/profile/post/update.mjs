@@ -1,5 +1,5 @@
-import { API_SOCIAL_URL } from "../constant.mjs";
-import { load } from "../../storage/index.mjs";
+import { API_SOCIAL_URL } from "../../constant.mjs";
+import { load } from "../../../storage/index.mjs";
 
 const action = "/profiles/";
 
