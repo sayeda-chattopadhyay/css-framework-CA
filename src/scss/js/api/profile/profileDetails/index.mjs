@@ -53,8 +53,8 @@ console.log(profileDetailConatiner);
 
 export function createProfileDetailsHTML(profile) {
   profileDetailConatiner.innerHTML = `<div class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center">
-  <div class="col-12 col-md-6">
-        <img src="${profile.avatar}" class="card-img-top img-thumbnail style="width: 18rem; height : 18rem;" alt="${profile.name}"/ >
+  <div class="col-12 col-md-6" >
+        <img src="${profile.avatar}" style="width: 18rem; height : 18rem;" alt="${profile.name}"/ >
   </div>
   <div class="col-12 col-md-6 d-flex flex-column">
       <div class="my-4">
