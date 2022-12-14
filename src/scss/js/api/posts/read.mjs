@@ -71,16 +71,18 @@ export function createPostsHTML(posts) {
   posts.forEach(function (post) {
     console.log(post);
     postCardsLists.innerHTML += `
-    <div class="d-flex justify-content-center border border-primary my-4 ">
+    <div class="d-flex justify-content-between border border-primary my-4 ">
     <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="card" style="width: 18rem;">
-                                            <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem; height : 18rem;" alt="${post.title}"/ >
+                                            <div>
+                                              <img src="${post.media}" class="class="img-fluid rounded-start" style="width: 18rem; height : 18rem;" alt="${post.title}"/ >
+                                            </div>                                      
                                             <div class="card-body">
-                                              <h2 class="card-title">${post.title}</h2>
-                                              <p class="card-text">${post.body}</p>
-                                              <p>By ${post.author.name}</p>
-                                              <p>Date: ${post.created}</p>
-                                              <p>comment:${post.comments}</p>
-                                              <p>reactions:${post.reaction}</p>
+                                                <h2 class="card-title">${post.title}</h2>
+                                                <p class="card-text">${post.body}</p>
+                                                <p class="card-text">By ${post.author.name}</p>
+                                                <p class="card-text">Date: ${post.created}</p>
+                                                <p class="card-text">comment:${post._count.comments}</p>
+                                                <p class="card-text">reactions:${post._count.reactions}</p>
                                               <a href="../../../../../post/specificPost/index.html?id=${post.id}" class="btn btn-primary">View Post</a>
                                             </div>
  </a>
