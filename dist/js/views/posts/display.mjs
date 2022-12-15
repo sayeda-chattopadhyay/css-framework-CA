@@ -52,3 +52,17 @@ export async function displaySearchedPosts(tag) {
     templates.displayError("postCardsLists", error); // ui.displayError("postCardsLists", error)
   }
 }
+
+////*********** */profile posts
+
+import * as profilePost from "../../api/profile/post/index.mjs";
+
+export async function displayAllprofilePosts() {
+  try {
+    templates.displayLoading("postCardsContainer"); // ui.displayLoading("postCardsLists");
+    const posts = await profilePost.getProfilePosts();
+    templates.createProfilePostHtml(posts);
+  } catch (error) {
+    templates.displayError("postCardsContainer", error); // ui.displayError("postCardsLists", error)
+  }
+}

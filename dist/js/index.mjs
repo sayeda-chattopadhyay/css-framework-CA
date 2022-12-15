@@ -26,6 +26,10 @@ switch (path) {
   case "/post/edit/index.html":
     listeners.setUpdatePostListener();
     break;
+
+  case "/profile/profile.html":
+    views.displayAllprofilePosts();
+    break;
 }
 
 //******************** */

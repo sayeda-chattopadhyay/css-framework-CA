@@ -16,3 +16,4 @@ export function displayError(containerId, error) {
 	div.appendChild(errorMessage);
 	container.appendChild(div);
 }
+

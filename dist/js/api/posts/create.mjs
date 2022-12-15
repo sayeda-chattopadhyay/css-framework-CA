@@ -6,10 +6,12 @@ const action = "/posts";
 export async function createPost(postData) {
   const createPostUrl = API_SOCIAL_URL + action;
 
-  console.log(createPostUrl);
-  console.log(postData);
+  // console.log(createPostUrl);
+
+  // console.log(postData);
+
   const token = load("token");
-  console.log(token);
+  // console.log(token);
 
   const response = await fetch(createPostUrl, {
     headers: {

@@ -1,6 +1,5 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
-// import { createPostsHTML } from "../../views/posts/displayAllPosts.mjs";
 
 const action = "/posts/";
 const qs = "?_author=true&_comments=true&_reactions=true";
@@ -15,10 +14,6 @@ export async function getPosts() {
       Authorization: `Bearer ${token}`,
     },
   });
-
-  // const posts = await response.json();
-
-  // console.log(posts);
 
   if (response.ok) {
     return await response.json();

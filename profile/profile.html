@@ -19,7 +19,9 @@
       class="navbar navbar-expand-md bg-white d-flex justify-content-center align-items-center fixed-top shadow"
     >
       <div class="container-fluid">
-        <a class="navbar-brand text-primary fw-bold" href="../post/create/index.html"
+        <a
+          class="navbar-brand text-primary fw-bold"
+          href="../post/create/index.html"
           >Bcreative</a
         >
         <button
@@ -55,7 +57,7 @@
               <a
                 class="nav-link text-primary text-danger"
                 href="./profile/index.html"
-                id = "logOut"
+                id="logOut"
                 >Log out</a
               >
             </li>
@@ -65,194 +67,14 @@
     </nav>
     <!-- main -->
     <main class="container-fluid mt-5">
-      <div id="UserDetails">
-
-      </div>
-
+      <div id="UserDetails"></div>
 
       <!-- hero section-->
-      <div class="container mb-4 border-bottom border-gray" id="profileDetail">
-      </div>
+      <div
+        class="container mb-4 border-bottom border-gray"
+        id="profileDetail"
+      ></div>
 
-      <!-- old code -->
-      <div >
-        <!-- <div
-          class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center"
-        >
-          <!-- Hero image -->
-          <!-- <div class="col-12 col-md-6" id="userAvatar">
-            <!-- <img
-              src=""
-              alt="Profile image"
-              class="rounded-circle me-2 img-fluid"
-              style="width: 400px; height: 400px; object-fit: cover mb-5"
-            /> -->
-          <!-- </div>
-          <!-- Hero details -->
-          <!-- <div class="col-12 col-md-6 d-flex flex-column">
-            <!-- user details -->
-            <!-- <div class="my-4">
-              <p class="h1" id="UserName"></p>
-              <p class="lh-lg" id="userEmail"></p>
-            </div>
-            follower details -->
-            <!-- <div
-              class="d-flex justify-content-between align-items-center border border-gray p-2"
-            >
-              <div class="d-f flex-column">
-                <p class="fw-bold" id="userPosts">Posts</p>
-                <p>24</p>
-              </div>
-              <!-- <div class="d-f flex-column >
-                <p class="fw-bold" id="userFriends">Friends</p>
-                <p>32</p>
-              </div> -->
-              <!-- <div class="d-f flex-column">
-                <p class="fw-bold" id="userFollowes">Follower</p>
-                <p>56</p>
-              </div>
-              <div class="d-f flex-column">
-                <p class="fw-bold" id="userFollowing">Following</p>
-                <p>82</p>
-              </div>
-            </div>  -->
-      
-            <!-- <div class="bg-white p-3 mt-3 rounded border">
-              <!-- avatar -->
-              <!-- <div class="d-flex">
-                <div class="p-1">
-                  <img
-                    src=""
-                    alt="avatar"
-                    class="rounded-circle me-2"
-                    style="width: 38px; height: 38px; object-fit: cover"
-                  />
-                </div>
-                <input
-                  type="text"
-                  class="form-control rounded-pill border-0 bg-gray pointer"
-                  disabled
-                  placeholder=" Write to me here"
-                  data-bs-toggle="modal"
-                  data-bs-target="#createModal"
-                />
-              </div>
-            </div>  -->
-       
-            <div
-              class="modal fade"
-              id="createModal"
-              tabindex="-1"
-              aria-labelledby="createModalLabel"
-              aria-hidden="true"
-              data-bs-backdrop="false"
-            >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <!-- head
-                  <div class="modal-header align-items-center">
-                    <div
-                      class="h3 text-dark text-center w-100 m-0"
-                      id="exampleModalLabel"
-                    >
-                      Create Post
-                    </div>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <!-- body -->
-                  <div class="modal-body">
-                    <div class="my-1 p-1">
-                      <div class="d-flex flex-column">
-                        <!-- name -->
-                        <div class="d-flex align-items-center">
-                          <div class="p-2">
-                            <img
-                              src=""
-                              alt="from fb"
-                              class="rounded-circle"
-                              style="
-                                width: 38px;
-                                height: 38px;
-                                object-fit: cover;
-                              "
-                            />
-                          </div>
-                          <div>
-                            <p class="m-0 fw-bold">Sayeda</p>
-                            <select
-                              class="form-select border-0 bg-gray w-75 fs-7"
-                              aria-label="Default select example"
-                            >
-                              <option selected value="1">Public</option>
-                              <option value="2">Pin To Top</option>
-                              <option value="3">Hide</option>
-                            </select>
-                          </div>
-                        </div>
-                        <!-- text -->
-                        <div>
-                          <textarea
-                            cols="30"
-                            rows="5"
-                            class="form-control border-0"
-                          ></textarea>
-                        </div>
-                        <!-- emoji  -->
-                        <div
-                          class="d-flex justify-content-between align-items-center"
-                        >
-                          <i
-                            class="far fa-laugh-wink fs-5 text-muted pointer"
-                          ></i>
-                        </div>
-                        <!-- options -->
-                        <div
-                          class="d-flex justify-content-between border border-1 border-light rounded p-3 mt-3"
-                        >
-                          <p class="m-0 text-muted">Add to your post</p>
-                          <div>
-                            <i
-                              class="fas fa-images fs-5 text-success pointer mx-1"
-                            ></i>
-                            <i
-                              class="fas fa-user-check fs-5 text-primary pointer mx-1"
-                            ></i>
-                            <i
-                              class="far fa-smile fs-5 text-warning pointer mx-1"
-                            ></i>
-                            <i
-                              class="fas fa-map-marker-alt fs-5 text-info pointer mx-1"
-                            ></i>
-                            <i
-                              class="fas fa-microphone fs-5 text-danger pointer mx-1"
-                            ></i>
-                            <i
-                              class="fas fa-ellipsis-h fs-5 text-muted pointer mx-1"
-                            ></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- end -->
-                  </div>
-                  <!-- footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary w-100">
-                      Post
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div> 
-      </div>
       <!-- main body -->
       <div class="container border border-primary">
         <div
@@ -333,15 +155,12 @@
         <li class="list-inline-item"><a href="#">Cookies</a></li>
       </ul>
     </footer>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script
       src="../src/scss/js/api/profile/post/index.mjs"
       type="module"
     ></script> -->
-    <script
-    src="../dist/js/api/profile/post/index.mjs"
-    type="module"
-  ></script>
+    <!-- <script src="../dist/js/api/profile/post/index.mjs" type="module"></script>
     <script
       src="../dist/js/api/profile/profileDetails/index.mjs"
       type="module"
@@ -349,8 +168,12 @@
     <script
       src="../dist/js/api/posts/getRegisteredProfiles.mjs"
       type="module"
-    ></script>
+    ></script> -->
     <!-- <script src="../src/scss/js/views/posts/displayAllRegisteredProfiles.mjs" type="module"></script> -->
-    <!-- <script src="../src/scss/js/search/index.mjs" type="module"></script> -->
+    <script src="../dist/js/index.mjs" type="module"></script>
+    <script
+      src="../dist/js/api/profile/profileDetails/index.mjs"
+      type="module"
+    ></script>
   </body>
 </html>
