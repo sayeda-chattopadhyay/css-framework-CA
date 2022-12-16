@@ -30,6 +30,10 @@ switch (path) {
   case "/profile/profile.html":
     views.displayAllprofilePosts();
     break;
+
+  // case "/post/specificPost/index.html":
+  //   views.displaySinglePost();
+  //   break;
 }
 
 //******************** */

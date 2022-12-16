@@ -56,6 +56,7 @@ export function createProfileDetailsHTML(profile) {
   <div class="col-12 col-md-6" >
         <img src="${profile.avatar}" style="width: 18rem; height : 18rem;" alt="${profile.name}"/ >
   </div>
+  
   <div class="col-12 col-md-6 d-flex flex-column">
       <div class="my-4">
           <p class="h1">${profile.name}</p>
