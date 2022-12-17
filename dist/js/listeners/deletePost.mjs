@@ -1,14 +1,22 @@
-// import { removePost } from "../api/posts/index.mjs";
+import * as api from "../api/posts/delete.mjs";
 
-// function deletePost() {
-//     const deleteBtn = document.querySelectorAll(".delete-post");
-//     deleteBtn.forEach((deleteElement) => {
-//       deleteElement.addEventListener("click", (event) => {
-//         event.preventDefault();
-//         const deleteData = event.target;
-//         const postId = deleteData.id;
-//         removePost(postId);
-//       });
-//     });
-//   }
-//   deletePost();
+export function setDeleteButtonListener() {
+  const deleteButton = document.querySelectorAll("[data-delete-id]");
+
+  console.log("deleteButton", deleteButton);
+
+  deleteButton.forEach(function (button) {
+    button.addEventListener("click", deletePost);
+  });
+}
+
+export async function deletePost(event) {
+  console.log(event.target.dataset.deleteId);
+
+  if (confirm("Are you sure you want to delete the post?")) {
+    const { deleteId } = event.target.dataset;
+
+    await api.removePost(deleteId);
+    window.location.reload();
+  }
+}
