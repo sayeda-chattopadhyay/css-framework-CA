@@ -1,18 +1,14 @@
-export function LogOut() {
-  const LogOut = document.getElementById("logOut");
-  console.log(LogOut);
+export function setLogoutButtonListener() {
+  const logOutbutton = document.getElementById("logOut");
+  console.log(logOutbutton);
 
-  LogOut.addEventListener("click", (event) => {
-    localStorage.removeItem("token");
-  });
+  if (logOutbutton) {
+    logOutbutton.addEventListener("click", () => {
+      if (confirm("Do you want to log out")) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("profile");
+        window.location.replace("/profile/login/login.html");
+      }
+    });
+  }
 }
-
-LogOut();
-
-//********
-
-// export function signOut() {
-//   localStorage.removeItem("accessToken");
-//   // after removing token user is redirected to login
-//   window.location.replace("/login.html");
-// }
