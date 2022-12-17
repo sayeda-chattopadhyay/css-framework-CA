@@ -33,7 +33,7 @@ export function setCreatePostListener() {
   }
 }
 
-setCreatePostListener();
+// setCreatePostListener();
 
 // NOTE
 // line-1 createPost() is created to send data which is collected in crea
