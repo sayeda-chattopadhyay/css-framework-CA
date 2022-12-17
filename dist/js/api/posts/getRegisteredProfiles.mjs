@@ -30,6 +30,3 @@ export async function getAllRegisteredProfile() {
     console.log("The error is :", error);
   }
 }
-
-// // getAllRegisteredProfile();
-// createRegisteredUsersHTML();
