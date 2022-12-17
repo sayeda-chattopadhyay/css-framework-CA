@@ -44,12 +44,12 @@ export async function displayAllPosts() {
 
 export async function displaySearchedPosts(tag) {
   try {
-    templates.displayLoading("postCardsLists"); // ui.displayLoading("postCardsLists");
+    templates.displayLoading("postCardsLists");
     const posts = await api.searchPosts(tag);
     console.log("post", posts);
     templates.createPostsHTML(posts);
   } catch (error) {
-    templates.displayError("postCardsLists", error); // ui.displayError("postCardsLists", error)
+    templates.displayError("postCardsLists", error);
   }
 }
 
