@@ -15,7 +15,7 @@ function router() {
       listeners.setRegisterFormListener();
       break;
 
-    case "/post/index.html":
+    case "/post/index.html": // home page
       views.displayAllPosts();
       listeners.setCreatePostListener();
       listeners.setSearchPostsListener();
@@ -26,7 +26,7 @@ function router() {
       listeners.setUpdatePostListener();
       break;
 
-    case "/profile/profile.html":
+    case "/profile/profile.html": // profile page
       views.displayAllprofilePosts();
       listeners.setLogoutButtonListener();
       break;
