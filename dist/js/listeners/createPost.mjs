@@ -1,8 +1,18 @@
 import { createPost } from "../api/posts/index.mjs";
 // import { CREATE_POST_URL } from "../api/constant";
 
+
+/**
+ * Listen to submit event on create post form and
+ * pass the input value to createPost function.
+ */
+
+
+
+
+
 export function setCreatePostListener() {
-  const form = document.querySelector("#createPost"); // in html page post->create->index.html line- 227
+  const form = document.querySelector("#createPost"); 
 
   if (form) {
     form.addEventListener("submit", (event) => {

@@ -9,8 +9,6 @@ export function setSearchPostsListener() {
       const form = event.target;
       const formData = new FormData(form);
       const tag = formData.get("tag");
-      console.log("tag", tag);
-
       views.displaySearchedPosts(tag);
     });
   }
