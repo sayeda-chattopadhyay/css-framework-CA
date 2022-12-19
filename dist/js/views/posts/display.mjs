@@ -5,18 +5,19 @@ import * as listeners from "../../listeners/index.mjs";
 export async function displayAllPosts() {
   try {
     templates.displayLoading("postCardsLists"); // ui.displayLoading("postCardsLists");
-    const posts = await api.getPosts();
-    templates.createPostsHTML(posts);
+    const posts = await api.getPosts(); // getting all posts from api
+    templates.createPostsHTML(posts); // passing these posts to the createPostsHTML
   } catch (error) {
     templates.displayError("postCardsLists", error); // ui.displayError("postCardsLists", error)
   }
 }
 
+//************Search Posts ********/
+
 export async function displaySearchedPosts(tag) {
   try {
     templates.displayLoading("postCardsLists");
     const posts = await api.searchPosts(tag);
-    console.log("post", posts);
     templates.createPostsHTML(posts);
   } catch (error) {
     templates.displayError("postCardsLists", error);
@@ -36,13 +37,15 @@ export async function displayAllprofilePosts() {
 
 ////*********** */single post*********
 
-import * as singlePost from "../../api/posts/specificPost.mjs";
+// import * as singlePost from "../../api/posts/specificPost.mjs";
 
 export async function displaySinglePost() {
   try {
     templates.displayLoading("specificPostContainer"); // ui.displayLoading("postCardsLists");
-    const posts = await singlePost.getPost(id);
-    templates.createHTML(posts);
+    // const posts = await singlePost.getPost(id);
+    const post = await api.getPost(id);
+    // templates.createHTML(post);
+    // templates.createSinglePostHTML(post);
   } catch (error) {
     templates.displayError("specificPostContainer", error); // ui.displayError("postCardsLists", error)
   }
