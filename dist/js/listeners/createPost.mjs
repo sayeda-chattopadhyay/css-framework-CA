@@ -1,21 +1,16 @@
 import { createPost } from "../api/posts/index.mjs";
 // import { CREATE_POST_URL } from "../api/constant";
 
-
 /**
  * Listen to submit event on create post form and
  * pass the input value to createPost function.
  */
 
-
-
-
-
 export function setCreatePostListener() {
-  const form = document.querySelector("#createPost"); 
+  const form = document.querySelector("#createPost");
 
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const form = event.target;
       console.log(form);
@@ -38,7 +33,14 @@ export function setCreatePostListener() {
       console.log("postData", postData);
 
       // Send it to the API
-      createPost(postData);
+      try {
+        await createPost(postData);
+
+        displayAllPosts();
+        
+      } catch (error) {
+        console.log(error);
+      }
     });
   }
 }
