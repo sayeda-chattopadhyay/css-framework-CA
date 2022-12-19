@@ -16,13 +16,14 @@ function router() {
       break;
 
     case "/post/index.html": // home page
-      views.displayAllPosts();
+      views.displayAllPosts(); // displaying all posts in home page
       listeners.setCreatePostListener();
       listeners.setSearchPostsListener();
       listeners.setLogoutButtonListener();
       break;
 
     case "/post/edit/index.html":
+    case "/post/edit/":
       listeners.setUpdatePostListener();
       break;
 
