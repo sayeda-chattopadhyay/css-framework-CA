@@ -39,8 +39,6 @@
           <!-- form -->
           <div class="col-12 col-md-5">
             <p class="h2">Register account</p>
-            <!-- register account form -->
-            <!-- Register form -->
             <form action="" id="registerForm">
               <div class="form-group mb-3">
                 <label for="name">Name</label>
@@ -51,6 +49,7 @@
                   required
                   pattern="^[\w]+$"
                   title="The name value must not contain punctuation symbols apart from underscore (_). "
+                  autocomplete="username"
                 />
               </div>
               <div class="form-group mb-3">
@@ -62,6 +61,7 @@
                   required
                   pattern="^[\w\-.]+@(stud.)?noroff.no$"
                   title="The email value must be a valid stud.noroff.no or noroff.no email address."
+                  autocomplete="username"
                 />
               </div>
               <div class="form-group mb-3">
@@ -73,16 +73,28 @@
                   required
                   minlength="8"
                   title="The password value must be at least 8 characters."
+                  placeholder="password"
+                  autocomplete="current-password"
                 />
               </div>
               <div class="form-group mb-3">
                 <label for="banner">Banner</label>
-                <input class="form-control" type="url" name="banner" />
+                <input
+                  class="form-control"
+                  type="url"
+                  name="banner"
+                  placeholder="Insert url"
+                />
               </div>
 
               <div class="form-group mb-3">
                 <label for="avatar">avatar</label>
-                <input class="form-control" type="url" name="avatar" />
+                <input
+                  class="form-control"
+                  type="url"
+                  name="avatar"
+                  placeholder="Insert url"
+                />
               </div>
               <button class="btn btn-success">Register</button>
             </form>
@@ -109,7 +121,6 @@
       </ul>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../../src/scss/js/index.mjs" type="module"></script> -->
     <script src="../../dist/js/index.mjs" type="module"></script>
   </body>
 </html>
