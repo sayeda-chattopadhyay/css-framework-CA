@@ -19,6 +19,4 @@ export function createRegisteredUsersHTML(profiles) {
   });
 }
 
-// createRegisteredUsersHTML(profiles);
-
 getAllRegisteredProfile();
