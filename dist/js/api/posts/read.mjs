@@ -1,6 +1,15 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
 
+/**
+ * getPosts() function fetching all the posts from server that users have created.
+ * searchPosts(tag) function fetches the posts that the users search through tag
+ * getPost(id) fetches single post by its id.
+ * getProfilePosts() fetche users own created posts
+ *
+ *
+ */
+
 const action = "/posts/";
 const qs = "?_author=true&_comments=true&_reactions=true";
 

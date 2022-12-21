@@ -1,6 +1,11 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
 
+/**
+ * This function remove user post.
+ * @param {number} id // This is the data-set id from delete button
+ */
+
 export async function removePost(id = 0) {
   const action = "/posts";
   const method = "delete";

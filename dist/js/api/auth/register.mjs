@@ -3,15 +3,23 @@ import { API_SOCIAL_URL } from "../constant.mjs";
 const action = "/auth/register";
 const method = "post";
 
-//  Async function for register profile( sending user prolfile data which collecting through form to api)
+/** This Async function sends data of registered users to the server through api fetch method.
+ *
+ * @param {object} profile This is user´s data in object
+ * @returns {object}
+ * @example
+ *  ```js
+ * //
+ * register(profile)
+ * // returns {id: 441, name: 'Rony_Robinson', email: 'rony.robinson@noroff.no', banner: '', avatar: ''}
+ * ```
+ */
 
 export async function register(profile) {
   try {
+    console.log(profile);
+
     const registerURL = API_SOCIAL_URL + action;
-
-    // const body = JSON.stringify(profile);
-
-    // fetching register url
 
     const response = await fetch(registerURL, {
       headers: {
@@ -31,6 +39,3 @@ export async function register(profile) {
     console.log(error);
   }
 }
-
-// Note
-// here argument (profile) is the data provided by user while registering from

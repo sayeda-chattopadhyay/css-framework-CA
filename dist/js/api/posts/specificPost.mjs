@@ -1,8 +1,5 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
-// import {param}
-
-////getParamFunction start//////
 
 const querryString = document.location.search;
 console.log(querryString);
@@ -13,20 +10,14 @@ const name = params.get("name");
 console.log(name);
 console.log(id);
 
-////getParamFunction start end//////
-
 const action = "/posts";
 
 export async function getPost(id) {
-
   if (!id) {
     throw new Error("Required a postID");
   }
 
-  // const id = params.get("id"); // Get id from param func
-
   const getPostUrl = `${API_SOCIAL_URL}${action}/${id}`;
-
 
   const token = load("token");
 
@@ -50,18 +41,11 @@ export async function getPost(id) {
   // specificPostContainer.innerHTML = "";
 
   createHTML(postDetails);
-  // addModalFunction();
 
   // specificPostContainer.innerHTML = errorMessage("Something goes wrong");
 }
 
 getPost(id);
-
-// ///////////
-
-///////Single post Url////
-
-//**********************//
 
 function createHTML(details) {
   const specificPostContainer = document.getElementById("specificPost");

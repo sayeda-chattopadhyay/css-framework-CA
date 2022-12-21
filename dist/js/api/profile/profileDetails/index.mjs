@@ -11,10 +11,6 @@ const profileName = profile.name;
 
 console.log("profileName:", profileName);
 
-// const profileEmail = profile.email;
-// const profilBanner = profile.banner;
-// const profilAvatar = profile.avatar;
-
 const getProfileUrl = API_SOCIAL_URL + action + profileName;
 console.log("getProfileUrl:", getProfileUrl);
 
