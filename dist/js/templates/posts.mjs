@@ -19,8 +19,8 @@ export function createPostsHTML(posts) {
       <h2 class="card-title">${post.title}</h2>
       <p class="card-text">${post.body}</p>
       <p>Date: ${post.created}</p>
-      <p>reactions:${post.reaction}</p>
-      <a href="/post/specificPost/index.html?id=${post.id}&name=${post.author.name}" class="btn btn-primary">View Post</a>
+      <p class="card-text">By ${post.author.name}</p>
+      <a href="/post/specificPost/index.html?id=${post.id}&name=${post.author.name}" class="btn btn-primary mt-4">View Post</a>
     </div>
 </div>
 </a>`;
@@ -47,29 +47,9 @@ export function createProfilePostHtml(posts) {
                                             <p class="card-text">Date:${created}</p>
                                             <a href="/post/edit/?id=${id}" class="btn btn-primary">Edit Post</a> 
                                             <a href="/post/specificPost/index.html?id=${id}" class= "btn btn-primary">View Post</a>
-                                            <button data-delete-id=${id} class="delete-post">Delete Post</button>
+                                            <button data-delete-id=${id} class="delete-post border border-0">Delete Post</button>
                                           </div>
 
    </div>`;
   });
 }
-
-//**************Single post for specific page****** */
-
-// function createSinglePostHTML(post) {
-//   const specificPostContainer = document.getElementById("specificPost");
-//  specificPostContainer.innerHTML ="";
-
-//   specificPostContainer.innerHTML += ` <div class="card" style="width: 18rem;">
-//                                             <div class="">
-//                                                 <img src="${post.media}" class="card-img-top img-thumbnail style="width: 18rem;height : 18rem;" alt="${details.title}"/>
-//                                             </div>
-//                                             <div class="card-body">
-//                                                 <h2 class="card-title">${post.title}</h2>
-//                                                 <p class="card-text">${post.body}</p>
-//                                                 <p class="card-text">By ${post.author}</p>
-//                                                 <p class="card-text">By ${post.created}</p>
-
-//                                             </div>
-//                                         </div>`;
-// }
