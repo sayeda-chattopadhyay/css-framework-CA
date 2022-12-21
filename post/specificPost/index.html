@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore creative works from entire world and share yours."
+    />
+    <title>Bcreative | Specific Post</title>
+    <script
+      src="https://kit.fontawesome.com/bdb94ef7c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body class="bg-gray">
+    <!-- Top nav -->
+    <!-- nav-->
+    <nav
+      class="navbar navbar-expand-md bg-white d-flex justify-content-center align-items-center fixed-top shadow"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="../../index.html"
+          >Bcreative</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-primary fw-bold"
+                aria-current="page"
+                href="../../post/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="../../profile/profile.html"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="../profile/index.html"
+                >Log out</a
+              >
+            </li>
+          </ul>
+          <!-- search field start -->
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 border border-primary"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-primary text-white" type="submit">
+              Search
+            </button>
+          </form>
+          <!-- search field end -->
+        </div>
+      </div>
+    </nav>
+    <!-- main -->
+    <!-- Feeds -->
+    <main class="container-fluid">
+      <div class="mt-5">
+        <a href="../../post/index.html">Back</a>
+      </div>
+
+      <div class="row px-md-5">
+        <!---- - Create Post -->
+        <div
+          class="col-12 col-md-12 col-lg-6 mt-4 order-sm-1 order-md-1 order-lg-2"
+        >
+          <div
+            class="d-flex flex-column justify-content-center w-80 mx-auto mt-5"
+          ></div>
+          <!-- list of all posts -->
+          <div class="mt-5" id="specificPost">
+            <h2>Specific post</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer
+      class="mt-6 pt-5 text-muted text-center text-small border border-top border-gray"
+    >
+      <p class="mb-1">Bcreative © 2022</p>
+      <ul class="list-inline">
+        <li class="list-inline-item text-decoration-none">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+        <li class="list-inline-item"><a href="#">Cookies</a></li>
+      </ul>
+    </footer>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="../../dist/js/api/posts/specificPost.mjs"
+      type="module"
+    ></script>
+    <script src="../../dist/js/index.mjs" type="module"></script>
+  </body>
+</html>
+

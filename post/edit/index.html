@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Bcreative. This website is for all who loves to share their creative works and inspire others."
+    />
+    <title>Bcreative | Edit Post</title>
+    <script
+      src="https://kit.fontawesome.com/bdb94ef7c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body>
+    <main class="flex-grow-1">
+      <h1>Edit Your Post here</h1>
+      <div class="mt-5">
+        <a href="../../profile/profile.html">Back</a>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 mt-5">
+          <form action="" id="updatePost">
+            <div class="form-group mb-3">
+              <label for="">Title</label>
+              <input class="form-control" type="text" name="title" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="">Body</label>
+              <input class="form-control" type="text" name="body" required />
+            </div>
+            <div class="form-group mb-3">
+              <label for="">Media</label>
+              <input class="form-control" type="url" name="media" />
+            </div>
+            <button class="btn btn-success">Update Post</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="../../dist/js/listeners/updatePosts.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>

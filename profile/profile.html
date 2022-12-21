@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="See, post and edit your profile page." />
+    <title>Bcreative | Profile</title>
+    <script
+      src="https://kit.fontawesome.com/bdb94ef7c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body class="bg-gray">
+    <nav
+      class="navbar navbar-expand-md bg-white d-flex justify-content-center align-items-center fixed-top shadow"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="../post/index.html"
+          >Bcreative</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link text-primary"
+                aria-current="page"
+                href="../post/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-primary fw-bold" href="#"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border border-0" href="" id="logOut">
+                Log out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container-fluid mt-5">
+      <div id="UserDetails"></div>
+      <div
+        class="container mb-4 border-bottom border-gray"
+        id="profileDetail"
+      ></div>
+      <!-- main body -->
+      <div class="container border border-primary">
+        <div
+          class="row d-flex flex-column flex-lg-row justify-content-between align-items-start mt-5"
+        >
+          <!-- Posts -->
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="bg-white p-4 rounded mt-3">
+              <h2>All my posts</h2>
+              <div class="" id="postCardsContainer"></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="row d-flex justify-content-center">
+              <div
+                class="d-flex justify-content-between align-items-center mt-5 border-bottom border-gray"
+              >
+                <p class="text-muted fs-5 m-3"></p>
+                <div class="" id="registerdUsers"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="mt-6 pt-5 text-muted text-center text-small border border-top border-gray"
+    >
+      <p class="mb-1">Bcreative © 2022</p>
+      <ul class="list-inline">
+        <li class="list-inline-item text-decoration-none">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+        <li class="list-inline-item"><a href="#">Cookies</a></li>
+      </ul>
+    </footer>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/index.mjs" type="module"></script>
+    <script
+      src="../dist/js/api/profile/profileDetails/index.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>
