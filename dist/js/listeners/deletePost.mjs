@@ -1,9 +1,12 @@
 import * as api from "../api/posts/delete.mjs";
 
+/**
+ * Selects delete button through data-set id attribute.
+ * Use forEach method to loop throgh and adds eventlistener to all delete button to delete the post.
+ */
+
 export function setDeleteButtonListener() {
   const deleteButton = document.querySelectorAll("[data-delete-id]");
-
-  console.log("deleteButton", deleteButton);
 
   deleteButton.forEach(function (button) {
     button.addEventListener("click", deletePost);

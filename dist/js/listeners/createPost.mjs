@@ -1,9 +1,9 @@
 import { createPost } from "../api/posts/index.mjs";
-// import { CREATE_POST_URL } from "../api/constant";
+import { displayAllPosts } from "../views/posts/display.mjs";
 
 /**
- * Listen to submit event on create post form and
- * pass the input value to createPost function.
+ * Listens to submit event on createPost form and
+ * pass the input value to createPost function and display the post through displayAllPosts function.
  */
 
 export function setCreatePostListener() {
@@ -13,14 +13,10 @@ export function setCreatePostListener() {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const form = event.target;
-      console.log(form);
-
       const formData = new FormData(form);
-      //   const post = Object.fromEntries(formData.entries());
       const postData = Object.fromEntries(formData.entries());
-      console.log("postData", postData);
 
-      // tag start
+      console.log("post", postData);
 
       if (!postData.tags.trim()) {
         delete postData.tags;
@@ -28,46 +24,14 @@ export function setCreatePostListener() {
         postData.tags = postData.tags.split(",");
       }
 
-      // tag end
-
-      console.log("postData", postData);
-
       // Send it to the API
       try {
         await createPost(postData);
 
         displayAllPosts();
-        
       } catch (error) {
         console.log(error);
       }
     });
   }
 }
-
-// setCreatePostListener();
-
-// NOTE
-// line-1 createPost() is created to send data which is collected in crea
-
-// problem can be here createPost(post)
-
-// Trying again
-
-// function setCreatePostListener() {
-//   const form = document.getElementById("createPost");
-//   form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     console.log(e);
-//     const form = e.target;
-//     const title = form[0].value;
-//     const body = form[1].value;
-//     const image = form[2].value;
-//     const create_POST = { form, title, body, image };
-
-//     console.log(create_POST);
-
-//     createPost(CREATE_POST_URL, create_POST);
-//   });
-// }
-// setCreatePostListener();
