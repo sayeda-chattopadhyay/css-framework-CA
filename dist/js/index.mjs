@@ -31,10 +31,6 @@ function router() {
       views.displayAllprofilePosts();
       listeners.setLogoutButtonListener();
       break;
-
-    // case "/post/specificPost/index.html":
-    //   views.displaySinglePost();
-    //   break;
   }
 }
 
