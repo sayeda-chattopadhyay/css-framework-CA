@@ -1,5 +1,10 @@
 import * as listeners from "../listeners/index.mjs";
 
+/**
+ * this function retrieves posts and create html.
+ *
+ */
+
 export function createPostsHTML(posts) {
   const postCardsLists = document.getElementById("postCardsLists");
 
@@ -28,6 +33,10 @@ export function createPostsHTML(posts) {
 }
 
 /////Create profile posts
+
+/**
+ * this function retrievs users own created posts and creates html
+ */
 
 export function createProfilePostHtml(posts) {
   const postCardsContainer = document.getElementById("postCardsContainer");
