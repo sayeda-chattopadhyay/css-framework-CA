@@ -3,11 +3,11 @@ import { load } from "../../storage/index.mjs";
 
 /**
  * This function sends user posts to api server.
- * @param {object} postData // the data that users puts in the create post form
+ * @param {object} postData // the data that users put in the create post form.
  * @returns {object}
  * @example
  *  ```js
- * //
+ * // call
  * createPost(postData)
  * // returns {title: 'Winter in Norway', body: 'Along the coast, temperatures usually stay around …rience an bone chilling minus 40 degrees Celsius!', tags: Array(2), media: 'https://picsum.photos/id/29/200', created: '2022-12-21T01:27:20.689Z', …}
  * ```
@@ -31,5 +31,4 @@ export async function createPost(postData) {
 
   console.log(response);
   const json = await response.json();
-  console.log(json);
 }

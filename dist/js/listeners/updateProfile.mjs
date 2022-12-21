@@ -1,5 +1,10 @@
 import { updateProfile } from "../api/profile/profileDetails/update.mjs";
 
+/**
+ * This functions retrieves users updated profile data from form input.
+ * Then it passes the data to the async function updateProfile(profile) in order to send the new data to the correct API endpoint.
+ */
+
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#updateProfile");
   if (form) {
@@ -8,17 +13,7 @@ export async function setUpdateProfileListener() {
       const form = event.target;
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
-      console.log(profile);
-      // post.id = id;
-
-      // if (!post.tags.trim()) {
-      //   delete post.tags;
-      // } else {
-      //   post.tags = post.tags.split(",");
-      // }
-      // console.log("post", post);
-
-      // Send it to the API
+      
       updateProfile(profile);
     });
   }

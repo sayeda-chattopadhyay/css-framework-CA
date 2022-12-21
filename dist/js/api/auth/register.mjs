@@ -5,7 +5,7 @@ const method = "post";
 
 /** This Async function sends data of registered users to the server through api fetch method.
  *
- * @param {object} profile This is user´s data in object
+ * @param {object} profile This is user´s required profile registered data in object form
  * @returns {object}
  * @example
  *  ```js

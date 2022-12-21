@@ -3,7 +3,7 @@ import { load } from "../../storage/index.mjs";
 
 /**
  * This function remove user post.
- * @param {number} id // This is the data-set id from delete button
+ * @param {number} id // This is the data-set id retrieve from delete button to create api endpoint where the delete api request needs to be sent.
  */
 
 export async function removePost(id = 0) {

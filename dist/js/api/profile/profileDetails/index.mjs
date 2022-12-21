@@ -2,23 +2,14 @@ import { API_SOCIAL_URL } from "../../constant.mjs";
 import { load } from "../../../storage/index.mjs";
 
 const action = "/profiles/";
-
 const token = load("token");
-console.log(token);
 
 const profile = load("profile");
 const profileName = profile.name;
 
-console.log("profileName:", profileName);
-
 const getProfileUrl = API_SOCIAL_URL + action + profileName;
-console.log("getProfileUrl:", getProfileUrl);
-
 const followersFollowings = "?_following=true&_followers=true";
-
 const getProfileDetailsUrl = getProfileUrl + followersFollowings;
-
-console.log("getProfileDetailsUrl:", getProfileDetailsUrl);
 
 export async function getProfileDetails() {
   try {
@@ -29,13 +20,9 @@ export async function getProfileDetails() {
       },
     });
 
-    console.log(response);
-
     const profileDetails = await response.json();
 
     createProfileDetailsHTML(profileDetails);
-
-    console.log("profileDetails:", profileDetails);
   } catch (error) {
     console.log(error);
   }
@@ -45,7 +32,6 @@ getProfileDetails();
 // create innerHTML////
 
 const profileDetailConatiner = document.getElementById("profileDetail");
-console.log(profileDetailConatiner);
 
 export function createProfileDetailsHTML(profile) {
   profileDetailConatiner.innerHTML = `<div class="row d-flex flex-column flex-md-row justify-content-evenly align-items-center">

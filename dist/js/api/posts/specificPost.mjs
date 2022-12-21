@@ -1,6 +1,11 @@
 import { API_SOCIAL_URL } from "../constant.mjs";
 import { load } from "../../storage/index.mjs";
 
+/**
+ * getPost(id) function fetches post from api server by its unique id. Retieves the data in object and passes to
+ * createHTML(details)function to create dynamic html.
+ */
+
 const querryString = document.location.search;
 console.log(querryString);
 const params = new URLSearchParams(querryString);

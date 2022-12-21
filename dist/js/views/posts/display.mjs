@@ -4,15 +4,24 @@ import * as listeners from "../../listeners/index.mjs";
 
 export async function displayAllPosts() {
   try {
-    templates.displayLoading("postCardsLists"); // ui.displayLoading("postCardsLists");
+    templates.displayLoading("postCardsLists"); // ui.displayLoading("postCardsLists"); Loading indication to the html Post container
     const posts = await api.getPosts(); // getting all posts from api
     templates.createPostsHTML(posts); // passing these posts to the createPostsHTML
   } catch (error) {
-    templates.displayError("postCardsLists", error); // ui.displayError("postCardsLists", error)
+    templates.displayError("postCardsLists", error); // ui.displayError("postCardsLists", error) displays error message
   }
 }
 
 //************Search Posts ********/
+
+/**
+ * This function shows the posts searched by its tag.
+ * @param {string} tag This is the input(tag) that users put in the search form to search posts related to this tag.
+ * This function do the api call api.searchPosts(tag), passes the tag as this parameter.
+ * This async function searchPosts(tag) create url using this tag and get data from api and return arrays.
+ * This arrays (here posts) passes to the reusuable createPostsHTML(posts) function to show the posts on the same container which contains all get posts.
+ *
+ */
 
 export async function displaySearchedPosts(tag) {
   try {

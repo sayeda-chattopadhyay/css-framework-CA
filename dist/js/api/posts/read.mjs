@@ -3,7 +3,7 @@ import { load } from "../../storage/index.mjs";
 
 /**
  * getPosts() function fetching all the posts from server that users have created.
- * searchPosts(tag) function fetches the posts that the users search through tag
+ * searchPosts(tag) function fetches the posts that the users search by tag.
  * getPost(id) fetches single post by its id.
  * getProfilePosts() fetche users own created posts
  *
