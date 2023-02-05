@@ -17,17 +17,18 @@ const method = "post";
 
 export async function register(profile) {
   try {
-    console.log(profile);
-
     const registerURL = API_SOCIAL_URL + action;
 
-    const response = await fetch(registerURL, {
+    const userToRegister = {
       headers: {
         "content-Type": "application/json",
       },
       method,
       body: JSON.stringify(profile),
-    });
+    };
+
+    const response = await fetch(registerURL, userToRegister);
+    console.log(response);
 
     const result = await response.json();
     console.log(result);
